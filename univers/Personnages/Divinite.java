@@ -3,7 +3,15 @@ import univers.PersonnageDeBase;
 import univers.Interfaces.*;
 
 public abstract class Divinite extends PersonnageDeBase implements Divin {
-    public Divinite(){
+    String Nom;
+    public Divinite(String Nom, int vie){
+        super(Nom);
+        this.vie = vie;
         //System.out.println("Je suis une Divinité ! ");
+    }
+
+    @Override
+    public void Ressuciter(){
+        vie++;
     }
 }

@@ -1,9 +1,12 @@
 package univers.Personnages.Divinites;
 import univers.Personnages.Divinite;
+import univers.Element;
 
-public abstract class Dieu extends Divinite{
-    
-    public Dieu(){
-        //System.out.println("Je suis un Dieu !");
+public class Dieu extends Divinite{
+    Element Elem;
+    public Dieu(String Nom,int vie, Element Elem){
+        super(Nom,vie);
+        this.Elem = Elem;
+        System.out.println("Je suis un Dieu !");
     }
 }

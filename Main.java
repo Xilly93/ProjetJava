@@ -3,17 +3,11 @@ import representation.*;
 import univers.*;
 import univers.Artefactes.Artefacte;
 import univers.Objets.Objet;
-import univers.Armes.*;
 import univers.Personnages.*;
 import univers.Personnages.Divinites.*;
-import univers.Personnages.Divinites.Dieux.*;
 import univers.Personnages.Mortels.*;
 import univers.Personnages.Monstres.*;
 import univers.Personnages.Monstres.Creatures.*;
-import univers.Personnages.Monstres.Creatures.Communs.*;
-import univers.Personnages.Monstres.Creatures.Epics.*;
-import univers.Personnages.Monstres.Creatures.Legendaires.*;
-import univers.Personnages.Monstres.Creatures.Rares.*;
 import univers.Interfaces.*;
 
 public class Main{
@@ -26,19 +20,19 @@ public class Main{
 
         // ----------------------------TEST Nodes--------------------------- 
         // Test Decision Node
-
+        /*
         Node resultNode = dn1.chooseNext();
         resultNode.display();
         
         // Test ChanceNode ; 
-
+        
         double[] proba1 = {(double)1/3,(double)1/3,(double)1/3,0} ;
         ChanceNode cn1 = new ChanceNode("Je suis ChanceNode1",proba1,n1,tn1,tn2);
         Node resultNodeCn = cn1.chooseNext();
         resultNodeCn.display();
-
+        */
         // ----------------------------TEST MONSTRES--------------------------- 
-        
+        /*
         PersonnageDeBase H1 = new Civil();
         Monstre M0 = new Araignees();
         Monstre M1 = new Centaure();
@@ -60,7 +54,7 @@ public class Main{
         Divinite D5 = new Titan("Chronos");
         Divinite D6 = new Titan("Atlas");
         Divinite D7 = new Titan("Promethee");
-        
+        */
 
         //----------------------------TEST ARTEFACTE-OBJET---------------------------
         /*
@@ -70,5 +64,16 @@ public class Main{
         Objet O2 = Objet.Clef_Des_Enfers;
         */
        
+        //----------------------------TEST PERSONNAGES---------------------------
+        Divinite D1 = new Dieu("Zeus",4,Element.FOUDRE);
+        System.out.println("Je suis " +D1.getNom() +" et j'ai " + D1.getVie()+"vies.");
+        Monstre M1 = new Legendaire("Minotaure");
+        System.out.println("Je suis " +M1.getNom() +" et j'ai " + M1.getVie()+" vies.");
+        Legendaire M2 = new Legendaire("Dragon");
+        M2.Voler();
+        System.out.println("Je suis " +M2.getNom() +" et j'ai " + M2.getVie()+" vies et je vole : " + M2.getVol());
+
+
+        
     }
 }                       
