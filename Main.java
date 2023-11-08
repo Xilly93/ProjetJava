@@ -66,13 +66,13 @@ public class Main{
        
         //----------------------------TEST PERSONNAGES---------------------------
         Divinite D1 = new Dieu("Zeus",4,Element.FOUDRE);
-        System.out.println("Je suis " +D1.getNom() +" et j'ai " + D1.getVie()+"vies.");
         Monstre M1 = new Legendaire("Minotaure");
+        Element[] ElemList = {Element.FEU};
+        CreatureVolante M2 = new CreatureVolante("Dragon",5,ElemList);
+        
+        System.out.println("Je suis " +D1.getNom() +" et j'ai " + D1.getVie()+"vies.");
         System.out.println("Je suis " +M1.getNom() +" et j'ai " + M1.getVie()+" vies.");
-        Legendaire M2 = new Legendaire("Dragon");
-        M2.Voler();
         System.out.println("Je suis " +M2.getNom() +" et j'ai " + M2.getVie()+" vies et je vole : " + M2.getVol());
-
 
         
     }

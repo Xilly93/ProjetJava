@@ -1,16 +1,16 @@
 package univers.Personnages.Monstres.Creatures;
-import univers.Interfaces.Vol;
+import univers.Element;
 import univers.Personnages.Monstres.Creature;
 
-public class Rare extends Creature implements Vol{
-    boolean vol = false;
+public class Rare extends Creature {
     public Rare(String Nom){
         super(Nom);
         System.out.println("Je suis un monstre Rare !");
         this.vie = 3;
     }
 
-    public void Voler(){
-        this.vol = true;
+    public Rare(String Nom,Element[] Elems){
+        this(Nom);
+        this.Elems = Elems;
     }
 }

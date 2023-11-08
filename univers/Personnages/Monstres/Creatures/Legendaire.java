@@ -1,9 +1,9 @@
 package univers.Personnages.Monstres.Creatures;
+import univers.Element;
 import univers.Interfaces.Vol;
 import univers.Personnages.Monstres.Creature;
 
-public class Legendaire extends Creature implements Vol{
-    boolean vol = false;
+public class Legendaire extends Creature {
 
     public Legendaire(String Nom){
         super(Nom);
@@ -11,11 +11,9 @@ public class Legendaire extends Creature implements Vol{
         this.vie = 4;
     }
 
-    public void Voler(){
-        this.vol = true;
+    public Legendaire(String Nom,Element[] Elems){
+        this(Nom);
+        this.Elems = Elems;
     }
 
-    public boolean getVol(){
-        return this.vol;
-    }
 }

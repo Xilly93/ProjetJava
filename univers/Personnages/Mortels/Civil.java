@@ -1,6 +1,8 @@
 package univers.Personnages.Mortels;
 
-public class Civil extends Humain{
+import univers.Personnages.Mortel;
+
+public class Civil extends Mortel{
     protected String Nom;
     
     public Civil(String Nom){
