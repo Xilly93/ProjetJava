@@ -7,6 +7,5 @@ public class Dieu extends Divinite{
     public Dieu(String Nom,int vie, Element Elem){
         super(Nom,vie);
         this.Elem = Elem;
-        System.out.println("Je suis un Dieu !");
     }
 }

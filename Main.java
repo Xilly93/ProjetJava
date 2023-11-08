@@ -1,6 +1,7 @@
 import representation.*;
 
 import univers.*;
+import univers.Armes.Epee;
 import univers.Artefactes.Artefacte;
 import univers.Objets.Objet;
 import univers.Personnages.*;
@@ -9,9 +10,9 @@ import univers.Personnages.Mortels.*;
 import univers.Personnages.Monstres.*;
 import univers.Personnages.Monstres.Creatures.*;
 import univers.Interfaces.*;
+import java.util.Scanner;
 
 public class Main{
-
     public static void main (String args[]){
         Node n1 = new TerminalNode("Description");
         TerminalNode tn1 = new TerminalNode("Je suis le terminalNode1");
@@ -65,6 +66,7 @@ public class Main{
         */
        
         //----------------------------TEST PERSONNAGES---------------------------
+        /*
         Divinite D1 = new Dieu("Zeus",4,Element.FOUDRE);
         Monstre M1 = new Legendaire("Minotaure");
         Element[] ElemList = {Element.FEU};
@@ -73,7 +75,38 @@ public class Main{
         System.out.println("Je suis " +D1.getNom() +" et j'ai " + D1.getVie()+"vies.");
         System.out.println("Je suis " +M1.getNom() +" et j'ai " + M1.getVie()+" vies.");
         System.out.println("Je suis " +M2.getNom() +" et j'ai " + M2.getVie()+" vies et je vole : " + M2.getVol());
+        */
+        //----------------------------TEST HEROS ----------------------------
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Choisissez le nom de votre Héros : ");
+        String Nom = sc.next();
+        Heros heros = new Heros(Nom);
+        sc.nextLine();
+        System.out.print("Salut ! Tu es " +heros.getNom());
+        sc.nextLine();
+        System.out.print("Es tu prêt à commencer l'aventure ??");
+        sc.nextLine();
+        System.out.print("Super !!");
+        sc.nextLine();
+        System.out.print("Commencons par choisir ton arme");
+        sc.nextLine();
+        Epee epee = new Epee("Epee en bois",9,4,5);
+        Artefacte a1 = Artefacte.AILES;
+        Artefacte a2 = Artefacte.CASQUE_DE_HADES;
+        Objet o1 = Objet.CLEF_DES_ENFERS;
+        Objet o2 = Objet.TETE_DE_GORGOGNE;
 
+        heros.setArme(epee);
+        heros.ajouteArtefacte(a1);
+        heros.ajouteArtefacte(a2);
+        heros.ajouteObjet(o1);
+        heros.ajouteObjet(o2);
+
+        heros.showArme();
+        heros.showArtefactes();
+        heros.showObjets();
+
+        //System.out.print("Fin !!");
         
     }
 }                       

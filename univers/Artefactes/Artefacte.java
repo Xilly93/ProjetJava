@@ -1,3 +1,3 @@
 package univers.Artefactes;
 
-public enum Artefacte { Ailes, Bottes_De_Hermes, Casque_De_Hades, Bouclier }
+public enum Artefacte { AILES, BOTTE_DE_HERMES, CASQUE_DE_HADES, BOUCLIER }

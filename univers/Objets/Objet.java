@@ -1,3 +1,3 @@
 package univers.Objets;
 
-public enum Objet { Potion, Clef_Des_Enfers , Bouclier_Miroir, Yeux_Oedipe, Flute_De_Pan, Tete_De_Gorgogne, Torche}
+public enum Objet { POTION_VIE, POTION_DE_FORCE, CLEF_DES_ENFERS , BOUCLIER_MIROIR, YEUX_OEDIPE, FLUTE_DE_PAN, TETE_DE_GORGOGNE, TORCHE}
