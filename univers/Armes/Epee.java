@@ -1,13 +1,19 @@
 package univers.Armes;
 import univers.Interfaces.Melee;
+import univers.Element;
 
 public class Epee extends Arme implements Melee{
-    protected String Nom;
-    protected Element Elem;
 
-    public Epee(String Nom){
-        this.Nom = Nom;
-        this.Elem = Element.AUCUN;
+    public Epee(String Nom, int attaque, int portee, int precision){
+        super(Nom,attaque,portee,precision);
+    }
+
+    public Epee(String Nom, int attaque, int portee, int precision,Element Elem){
+        super(Nom,attaque,portee,precision,Elem);
+    }
+
+    public void Competence(){ // retire 2 vies à l'ennemi
+        return;
     }
 
     public void Ameliorer(){

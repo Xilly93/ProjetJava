@@ -1,17 +1,19 @@
 package univers.Armes;
+import univers.Element;
 
 import univers.Interfaces.Distance;
 
 public class Arc extends Arme implements Distance{
-    protected String Nom;
-    protected Element Elem;
 
-    public Arc(String Nom){
-        this.Nom = Nom;
-        this.Elem = Element.AUCUN;
+    public Arc(String Nom, int attaque, int portee, int precision){
+        super(Nom,attaque,portee,precision);
     }
 
-    public void Ameliorer(){
-        Elem = Element.VENT;
+    public Arc(String Nom, int attaque, int portee, int precision,Element Elem){
+        super(Nom,attaque,portee,precision,Elem);
+    }
+
+    public void Competence(){ // retire 2 vies à l'ennemi
+        return;
     }
 }
