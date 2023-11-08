@@ -8,4 +8,9 @@ public class Dieu extends Divinite{
         super(Nom,vie);
         this.Elem = Elem;
     }
+    @Override 
+    public String toString(){
+        return super.toString() + "\nElement:" + this.Elem; 
+
+    }
 }

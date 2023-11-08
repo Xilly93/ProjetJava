@@ -8,4 +8,9 @@ public class Commun extends Creature {
         this.vie = 1;
         this.Elems = null; // Les Communs n'ont pas d'elements
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nNiveau : Commun";
+    }
 }

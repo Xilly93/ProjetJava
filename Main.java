@@ -14,11 +14,12 @@ import java.util.Scanner;
 
 public class Main{
     public static void main (String args[]){
+        /* 
         Node n1 = new TerminalNode("Description");
         TerminalNode tn1 = new TerminalNode("Je suis le terminalNode1");
         TerminalNode tn2 = new TerminalNode("Je suis le terminalNode2");
         DecisionNode dn1 = new DecisionNode("Je suis decisionNode 1",n1,tn1,tn2);
-
+        */
         // ----------------------------TEST Nodes--------------------------- 
         // Test Decision Node
         /*
@@ -68,28 +69,23 @@ public class Main{
         //----------------------------TEST PERSONNAGES---------------------------
         /*
         Divinite D1 = new Dieu("Zeus",4,Element.FOUDRE);
-        Monstre M1 = new Legendaire("Minotaure");
-        Element[] ElemList = {Element.FEU};
-        CreatureVolante M2 = new CreatureVolante("Dragon",5,ElemList);
+        Element[] ElemList1 = {Element.ANIMAL};
+        Monstre M1 = new Legendaire("Minotaure",ElemList1);
+        Element[] ElemList2 = {Element.FEU,Element.VENT};
+        CreatureVolante M2 = new CreatureVolante("Dragon",5,ElemList2);
+        //Element[] ElemList3 = {Element.ANIMAL};
+        Monstre M3 = new Legendaire("Minotaure",ElemList2);
+
+
+        System.out.println(D1);
+        System.out.println(M1);
+        System.out.println(M2);
+        System.out.println(M3);
+        //System.out.println(M3.equals(M2));
+         */
         
-        System.out.println("Je suis " +D1.getNom() +" et j'ai " + D1.getVie()+"vies.");
-        System.out.println("Je suis " +M1.getNom() +" et j'ai " + M1.getVie()+" vies.");
-        System.out.println("Je suis " +M2.getNom() +" et j'ai " + M2.getVie()+" vies et je vole : " + M2.getVol());
-        */
         //----------------------------TEST HEROS ----------------------------
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Choisissez le nom de votre Héros : ");
-        String Nom = sc.next();
-        Heros heros = new Heros(Nom);
-        sc.nextLine();
-        System.out.print("Salut ! Tu es " +heros.getNom());
-        sc.nextLine();
-        System.out.print("Es tu prêt à commencer l'aventure ??");
-        sc.nextLine();
-        System.out.print("Super !!");
-        sc.nextLine();
-        System.out.print("Commencons par choisir ton arme");
-        sc.nextLine();
+         /*
         Epee epee = new Epee("Epee en bois",9,4,5);
         Artefacte a1 = Artefacte.AILES;
         Artefacte a2 = Artefacte.CASQUE_DE_HADES;
@@ -106,7 +102,35 @@ public class Main{
         heros.showArtefactes();
         heros.showObjets();
 
+        System.out.println(heros);
         //System.out.print("Fin !!");
+         */
+    // ------------------ PERSONNAGES -----------------------------
+    Dieu Hermes = new Dieu("Hermes",6,Element.VENT);
+    //-------------------HISTOIRE------------------
+    
+    // Choix du nom du personnage
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Choisissez le nom de votre Héros : ");
+        String Nom = sc.next();
+        Heros heros = new Heros(Nom);
+        sc.nextLine();
+        System.out.print("Salut ! Tu es " +heros.getNom());
+        sc.nextLine();
+        System.out.print("Es tu prêt à commencer l'aventure ??");
+        sc.nextLine();
+        System.out.print("Super !!");
+        sc.nextLine();
+        System.out.print("Commencons par choisir ton arme");
+        sc.nextLine();
+    // Partie 1 : Arrivée d'Hermes
+        String p1 = "Vous vous reveillez en plein milieu d'une piece vide. Vous ne savez pas qui vous etes. Vous avez perdu la mémoire.\n Hermes arrive! \n Salut, je suis Hermes, je viens t'aider dans ton aventure. Tu es dans le celebre et redoutable labyrinthe de Dedale. Ta mission est de t'echapper.\n Tu as bien compris: (Choisir 1,2,3,4)\n1.Oui\n2.Non ";
+        Node t1 = new TerminalNode("OUI");
+        Node t2 = new TerminalNode("NON");
+        Node dn1 = new DecisionNode(p1,t1,t2);
+        System.out.println(dn1.getDescription());
+        dn1.chooseNext();
+       
         
     }
 }                       

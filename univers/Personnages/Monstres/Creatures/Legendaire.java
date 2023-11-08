@@ -1,6 +1,5 @@
 package univers.Personnages.Monstres.Creatures;
 import univers.Element;
-import univers.Interfaces.Vol;
 import univers.Personnages.Monstres.Creature;
 
 public class Legendaire extends Creature {
@@ -16,4 +15,8 @@ public class Legendaire extends Creature {
         this.Elems = Elems;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "\nNiveau : Legendaire";
+    }
 }

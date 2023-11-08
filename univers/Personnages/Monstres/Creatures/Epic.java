@@ -13,4 +13,9 @@ public class Epic extends Creature{
         this(Nom);
         this.Elems = Elems;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nNiveau : Epic";
+    }
 }

@@ -7,4 +7,17 @@ public abstract class Monstre extends PersonnageDeBase{
     public Monstre(String Nom){
         super(Nom);
     }
+
+    @Override
+    public String toString() {
+        String s ="";
+        for (Element Elem : Elems){
+            s = s + Elem.toString();
+            s = s+" ";
+        }
+        if (s!="")
+            return super.toString() + "\nElement: "+s+"";
+        else
+            return super.toString();
+    }
 }
