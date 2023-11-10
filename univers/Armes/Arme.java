@@ -21,6 +21,18 @@ public abstract class Arme {
     }
 
     public abstract void Competence();
+
+    @Override 
+    public String toString(){
+        if (this.Elem==null)
+            return "\n" + this.Nom + "\nAttaques : " + this.attaque + "\nPortee : " + this.portee  + "\nPrecision : " + this.precision + "\nElement : AUCUN" ;
+        else
+            return "\n" + this.Nom + "\nAttaques : " + this.attaque + "\nPortee : " + this.portee  + "\nPrecision : " + this.precision + "\nELEMENT : " + this.Elem ;
+    }
+
+    public String getNom(){
+        return this.Nom ;
+    }
     
     public int getAttaque(){
         return this.attaque;
@@ -38,11 +50,20 @@ public abstract class Arme {
         return this.Elem ;
     }
 
-    public void setElem(Element Elem){
-        this.Elem = Elem;
+    public void setAttaque(int attaque){
+        this.attaque = attaque;
     }
 
-    public String getNom(){
-        return this.Nom ;
+    public void setPortee(int portee){
+        this.portee = portee;
+    }
+
+    public void getPrecision(int precision){
+        this.precision = precision;
+    }
+
+
+    public void setElem(Element Elem){
+        this.Elem = Elem;
     }
 }

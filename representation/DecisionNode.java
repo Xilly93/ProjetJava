@@ -17,23 +17,18 @@ public class DecisionNode extends InnerNode {
         super(description,n1,n2,null,null);
     }
 
+    public DecisionNode(String description){
+        super(description);
+    }
+
 
     
     @Override
     public Node chooseNext(){
 
-        while(decision == 0){
-            System.out.print("Choisissez le node 1,2,3 ou 4 : ");
+        while(! (decision == 1 ||decision == 2 ||decision == 3 ||decision == 4 )){
+            System.out.print("\nDECISION : ");
             this.decision = sc.nextInt();
-        }
-
-        if (decision == 0){
-            System.out.println("Apprends à ecrire");
-            return null;
-            }
-        if (decision >4){
-            System.out.println("Apprends à lire");
-            return null;
         }
         return nodes[decision-1];
 

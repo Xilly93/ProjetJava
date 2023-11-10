@@ -7,7 +7,7 @@ public class Civil extends Mortel{
     
     public Civil(String Nom){
         super(Nom);
-        System.out.println("Je suis " + Nom );
+        //System.out.println("Je suis " + Nom );
     }
 }
 

@@ -18,6 +18,11 @@ public class ChanceNode extends InnerNode{
         this.proba = proba;
     }
 
+    public ChanceNode(String description, double[] proba){
+        super(description);
+        this.proba = proba;
+    }
+
     @Override
     public Node chooseNext(){
         Random rd = new Random();

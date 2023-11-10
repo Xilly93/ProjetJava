@@ -5,7 +5,7 @@ import univers.Personnages.Monstres.Creature;
 public class Rare extends Creature {
     public Rare(String Nom){
         super(Nom);
-        System.out.println("Je suis un monstre Rare !");
+        //System.out.println("Je suis un monstre Rare !");
         this.vie = 3;
     }
 

@@ -1,7 +1,7 @@
 import representation.*;
 
 import univers.*;
-import univers.Armes.Epee;
+import univers.Armes.*;
 import univers.Artefactes.Artefacte;
 import univers.Objets.Objet;
 import univers.Personnages.*;
@@ -85,32 +85,40 @@ public class Main{
          */
         
         //----------------------------TEST HEROS ----------------------------
-         /*
+         /* 
         Epee epee = new Epee("Epee en bois",9,4,5);
         Artefacte a1 = Artefacte.AILES;
         Artefacte a2 = Artefacte.CASQUE_DE_HADES;
         Objet o1 = Objet.CLEF_DES_ENFERS;
         Objet o2 = Objet.TETE_DE_GORGOGNE;
-
+        Heros heros = new Heros("L");
         heros.setArme(epee);
         heros.ajouteArtefacte(a1);
         heros.ajouteArtefacte(a2);
         heros.ajouteObjet(o1);
         heros.ajouteObjet(o2);
 
-        heros.showArme();
-        heros.showArtefactes();
-        heros.showObjets();
-
         System.out.println(heros);
-        //System.out.print("Fin !!");
          */
     // ------------------ PERSONNAGES -----------------------------
-    Dieu Hermes = new Dieu("Hermes",6,Element.VENT);
+    Dieu[] Dieux = {new Dieu("Poseidon",6,Element.EAU),new Dieu("Zeus",6,Element.FOUDRE),new Dieu("Héphaistos",6,Element.FEU),new Dieu("Ares",6,Element.FEU),new Dieu("Hermes",6,Element.VENT)};
+    Titan[] Titans = {new Titan("Chronos",6),new Titan("Promethee",6),new Titan("Atlas",6)};
+    DemiDieu[] DemiDieux = {new DemiDieu("Hercule"),new DemiDieu("Achille"),new DemiDieu("Thesee"),new DemiDieu("Ulysse")};
+    Civil[] Civils = {new Civil("Persee"),new Civil("Dedale"),new Civil("Icare"),new Civil("Oedipe"),new Civil("Jason"),new Civil("Midas")};
+    Commun[] Communs = {new Commun("Araignees")};
+    Rare[] Rares = {new Rare("Sirene", new Element[]{Element.EAU,Element.ANIMAL}),new Rare("Satyre", new Element[]{Element.ANIMAL}),new Rare("Centaure", new Element[]{Element.ANIMAL})};
+    Demon[] Demons = {new Demon("Cerbere", new Element[]{Element.ANIMAL,Element.FEU,Element.ENFER}),new Demon("Gorgogne", new Element[]{Element.ENFER})};
+    
+    // ------------------ ARMES -----------------------------
+    Epee[] Epees = {new Epee("Epee en bois",9,4,7), new Epee("Excalibur", 100, 50, 20,Element.FEU)};
+    Lance[] Lances = {new Lance("Lance en bois",7,9,4)};
+    Arc[] Arc = {new Arc("Arc en bois",4,7,9)}; 
+
+
     //-------------------HISTOIRE------------------
     
+    Scanner sc = new Scanner(System.in);
     // Choix du nom du personnage
-        Scanner sc = new Scanner(System.in);
         System.out.print("Choisissez le nom de votre Héros : ");
         String Nom = sc.next();
         Heros heros = new Heros(Nom);
@@ -121,16 +129,33 @@ public class Main{
         sc.nextLine();
         System.out.print("Super !!");
         sc.nextLine();
-        System.out.print("Commencons par choisir ton arme");
-        sc.nextLine();
+    
     // Partie 1 : Arrivée d'Hermes
-        String p1 = "Vous vous reveillez en plein milieu d'une piece vide. Vous ne savez pas qui vous etes. Vous avez perdu la mémoire.\n Hermes arrive! \n Salut, je suis Hermes, je viens t'aider dans ton aventure. Tu es dans le celebre et redoutable labyrinthe de Dedale. Ta mission est de t'echapper.\n Tu as bien compris: (Choisir 1,2,3,4)\n1.Oui\n2.Non ";
+    
+        // INITIALISATION DES NOEUDS
+        String I1p1 = "\nVous vous reveillez en plein milieu d'une piece vide. Vous ne savez pas qui vous etes. Vous avez perdu la mémoire.\n ";
+        String I1p2 = "Vous voyez un mystérieux personnage arrivé du ciel. Qui est ce mysterieux personnage ?";
+        String I1p3 = "Salut, je suis Hermes, je viens t'aider dans ton aventure. Tu es dans le celebre et redoutable labyrinthe de Dedale.\n";
+        String I1p4 = "Considère ce lieu comme ta prison. Dieu t'as enfermé pour avoir commis un crime impardonable !";
+        String I1p5 = "Ta mission est de t'echapper ou sinon tu periras a vie dans ce lieu.";
+        String I1p6 = "Si tu as bien compris dis moi OUI, sinon NON :\n1.Oui\n2.Non\n(Choississez entre 1 ou 2)";
+        InnerNode[] I1 = {new InnerNode(I1p1),new InnerNode(I1p2),new InnerNode(I1p3),new InnerNode(I1p4),new InnerNode(I1p5)};
+        DecisionNode dn1 = new DecisionNode(I1p6);
+        for (int i = 0; i<I1.length-1; i++){
+            I1[i].setNodes(I1[i+1]);
+        }
+        I1[4].setNodes(dn1);
         Node t1 = new TerminalNode("OUI");
         Node t2 = new TerminalNode("NON");
-        Node dn1 = new DecisionNode(p1,t1,t2);
+        dn1.setNodes(t1,t2);
+
+        // Execution DES NOEUDS
+        for (int i = 0; i<I1.length; i++){
+            System.out.print(I1[i].getDescription());
+            sc.nextLine();
+        }
         System.out.println(dn1.getDescription());
         dn1.chooseNext();
-       
-        
+    
     }
 }                       

@@ -11,7 +11,6 @@ public class Heros extends Mortel {
 
     public Heros(String Nom){
         super(Nom);
-        System.out.println("Je suis " + Nom );
         this.vie = 3;
     }
 
@@ -74,7 +73,18 @@ public class Heros extends Mortel {
                 return;
             }
         }
-        System.out.println("Probleme sortie Artefactes");
+        System.out.println("Probleme sortie Objets");
+    }
+    @Override
+    public String toString(){
+        System.out.print("\tHeros : " + this.Nom + "\n");
+        System.out.print("Arme :" + this.arme + "\n");
+        System.out.print("\nArtefactes:\n");
+        showArtefactes();
+        System.out.print("\nObjets:\n");
+        showObjets();
+
+        return"";
     }
     
 }
