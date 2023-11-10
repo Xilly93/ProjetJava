@@ -1,3 +1,7 @@
 package univers;
 
-public enum Element { AUCUN, FEU, EAU, VENT, FOUDRE, ANIMAL, DIVIN, ENFER}
+// Liste des ELEMENTS possible
+// Armes : FEU EAU VENT FOUDRE
+// Personnages : FEU EAUT VENT FOUDRE ANIMAL 
+// Regarder le cycles des forces faiblesses sur le doc
+public enum Element { FEU, EAU, VENT, FOUDRE, ANIMAL}

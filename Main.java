@@ -85,7 +85,7 @@ public class Main{
          */
         
         //----------------------------TEST HEROS ----------------------------
-         /* 
+         
         Epee epee = new Epee("Epee en bois",9,4,5);
         Artefacte a1 = Artefacte.AILES;
         Artefacte a2 = Artefacte.CASQUE_DE_HADES;
@@ -99,7 +99,7 @@ public class Main{
         heros.ajouteObjet(o2);
 
         System.out.println(heros);
-         */
+         
     // ------------------ PERSONNAGES -----------------------------
     Dieu[] Dieux = {new Dieu("Poseidon",6,Element.EAU),new Dieu("Zeus",6,Element.FOUDRE),new Dieu("Héphaistos",6,Element.FEU),new Dieu("Ares",6,Element.FEU),new Dieu("Hermes",6,Element.VENT)};
     Titan[] Titans = {new Titan("Chronos",6),new Titan("Promethee",6),new Titan("Atlas",6)};
@@ -107,7 +107,7 @@ public class Main{
     Civil[] Civils = {new Civil("Persee"),new Civil("Dedale"),new Civil("Icare"),new Civil("Oedipe"),new Civil("Jason"),new Civil("Midas")};
     Commun[] Communs = {new Commun("Araignees")};
     Rare[] Rares = {new Rare("Sirene", new Element[]{Element.EAU,Element.ANIMAL}),new Rare("Satyre", new Element[]{Element.ANIMAL}),new Rare("Centaure", new Element[]{Element.ANIMAL})};
-    Demon[] Demons = {new Demon("Cerbere", new Element[]{Element.ANIMAL,Element.FEU,Element.ENFER}),new Demon("Gorgogne", new Element[]{Element.ENFER})};
+    Demon[] Demons = {new Demon("Cerbere", new Element[]{Element.ANIMAL,Element.FEU}),new Demon("Gorgogne", new Element[]{})};
     
     // ------------------ ARMES -----------------------------
     Epee[] Epees = {new Epee("Epee en bois",9,4,7), new Epee("Excalibur", 100, 50, 20,Element.FEU)};
@@ -121,7 +121,7 @@ public class Main{
     // Choix du nom du personnage
         System.out.print("Choisissez le nom de votre Héros : ");
         String Nom = sc.next();
-        Heros heros = new Heros(Nom);
+        //Heros heros = new Heros(Nom);
         sc.nextLine();
         System.out.print("Salut ! Tu es " +heros.getNom());
         sc.nextLine();

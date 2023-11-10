@@ -1,7 +1,7 @@
 package univers;
 
 public abstract class PersonnageDeBase {
-    protected int vie;
+    protected int vie; // Nombres de vies du personnage
     protected String Nom;
     public PersonnageDeBase(String Nom){
         //System.out.println("Je suis un personnage de base !");

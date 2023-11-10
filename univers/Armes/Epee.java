@@ -16,7 +16,4 @@ public class Epee extends Arme implements Melee{
         return;
     }
 
-    public void Ameliorer(){
-        Elem = Element.AUCUN;
-    }
 }
