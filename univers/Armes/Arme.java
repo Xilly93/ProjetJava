@@ -1,6 +1,13 @@
 package univers.Armes;
 import univers.Element;
 
+/* 
+- Chaque arme contient 3 attributs: attaque, portee, precision (0 à 50).
+- Certeins choix EN COMBAT nécessite un minimum d'attaque, de portee, ou de precision pour
+pouvoir faire perdre une vie à l'adversaire.
+- Si le choix est choisi et le nbr d'attaque , portee, precision est inférieur, 
+alors le héros perd une vie.
+ */
 public abstract class Arme {
     protected String Nom;
     protected Element Elem; // FEU VENT EAU FOUDRE
@@ -20,7 +27,7 @@ public abstract class Arme {
         this.Elem = Elem;
     }
 
-    public abstract void Competence();
+    public abstract void Competence();// Envoie une competence speciale selon l'arme.
 
     @Override 
     public String toString(){
@@ -30,6 +37,7 @@ public abstract class Arme {
             return "\n" + this.Nom + "\nAttaques : " + this.attaque + "\nPortee : " + this.portee  + "\nPrecision : " + this.precision + "\nELEMENT : " + this.Elem ;
     }
 
+    //GETTERS
     public String getNom(){
         return this.Nom ;
     }
@@ -50,6 +58,8 @@ public abstract class Arme {
         return this.Elem ;
     }
 
+    //SETTERS
+
     public void setAttaque(int attaque){
         this.attaque = attaque;
     }
@@ -58,7 +68,7 @@ public abstract class Arme {
         this.portee = portee;
     }
 
-    public void getPrecision(int precision){
+    public void setPrecision(int precision){
         this.precision = precision;
     }
 

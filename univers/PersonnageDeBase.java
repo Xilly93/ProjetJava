@@ -15,6 +15,14 @@ public abstract class PersonnageDeBase {
         return this.Nom;
     }
 
+    public void setVie(int vie){
+        this.vie = vie;
+    }
+
+    public void setNom(String Nom){
+        this.Nom = Nom;
+    }
+
     @Override 
     public String toString(){
         return "\n" + this.Nom + "\nVies : " + this.vie ;
