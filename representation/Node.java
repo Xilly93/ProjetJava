@@ -33,13 +33,19 @@ public abstract class  Node {
         System.out.println(this.description);
     }
 
-    public String getDescription(){
-        return description;
+    abstract public Node chooseNext();
+
+    @Override
+    public String toString(){
+        this.display();
+        return "";
     }
 
     public int getId(){
         return id;
     }
 
-    abstract public Node chooseNext();
+    public String getDescription(){
+        return description;
+    }
 }

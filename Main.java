@@ -14,15 +14,10 @@ import java.util.Scanner;
 
 public class Main{
     public static void main (String args[]){
-        /* 
-        Node n1 = new TerminalNode("Description");
-        TerminalNode tn1 = new TerminalNode("Je suis le terminalNode1");
-        TerminalNode tn2 = new TerminalNode("Je suis le terminalNode2");
-        DecisionNode dn1 = new DecisionNode("Je suis decisionNode 1",n1,tn1,tn2);
-        */
         // ----------------------------TEST Nodes--------------------------- 
-        // Test Decision Node
         /*
+        // Test Decision Node
+        
         Node resultNode = dn1.chooseNext();
         resultNode.display();
         
@@ -32,30 +27,6 @@ public class Main{
         ChanceNode cn1 = new ChanceNode("Je suis ChanceNode1",proba1,n1,tn1,tn2);
         Node resultNodeCn = cn1.chooseNext();
         resultNodeCn.display();
-        */
-        // ----------------------------TEST MONSTRES--------------------------- 
-        /*
-        PersonnageDeBase H1 = new Civil();
-        Monstre M0 = new Araignees();
-        Monstre M1 = new Centaure();
-        Monstre M2 = new Sirene();
-        Monstre M3 = new Harpie();
-        Monstre M4 = new Gorgone();
-        Monstre M5 = new Chimere();
-        Monstre M6 = new LoupGarou();
-        Monstre M7 = new Dragon();
-        Monstre M8 = new Cerbere();
-        Monstre M9= new Minotaure();
-        Monstre M10 = new Hydre();
-
-        Divinite D1 = new Poseidon();
-        Divinite D2 = new Zeus();
-        Divinite D3 = new Hephaistos();
-        Divinite D4 = new Ares();
-
-        Divinite D5 = new Titan("Chronos");
-        Divinite D6 = new Titan("Atlas");
-        Divinite D7 = new Titan("Promethee");
         */
 
         //----------------------------TEST ARTEFACTE-OBJET---------------------------
@@ -85,7 +56,7 @@ public class Main{
          */
         
         //----------------------------TEST HEROS ----------------------------
-         
+         /*
         Epee epee = new Epee("Epee en bois",9,4,5);
         Artefacte a1 = Artefacte.AILES;
         Artefacte a2 = Artefacte.CASQUE_DE_HADES;
@@ -99,7 +70,15 @@ public class Main{
         heros.ajouteObjet(o2);
 
         System.out.println(heros);
-         
+          */
+
+    //Test Terminal Node
+    TerminalNode t1 = new TerminalNode("TERMINAL NODE 1");
+    TerminalNode t2 = new TerminalNode("TERMINAL NODE 2");
+    TerminalNode t3 = new TerminalNode("TERMINAL NODE 3");
+    TerminalNode t4 = new TerminalNode("TERMINAL NODE 4");
+    TerminalNode GameOverTn = new TerminalNode("GAME OVER");
+
     // ------------------ PERSONNAGES -----------------------------
     Dieu[] Dieux = {new Dieu("Poseidon",6,Element.EAU),new Dieu("Zeus",6,Element.FOUDRE),new Dieu("Héphaistos",6,Element.FEU),new Dieu("Ares",6,Element.FEU),new Dieu("Hermes",6,Element.VENT)};
     Titan[] Titans = {new Titan("Chronos",6),new Titan("Promethee",6),new Titan("Atlas",6)};
@@ -121,7 +100,7 @@ public class Main{
     // Choix du nom du personnage
         System.out.print("Choisissez le nom de votre Héros : ");
         String Nom = sc.next();
-        //Heros heros = new Heros(Nom);
+        Heros heros = new Heros(Nom);
         sc.nextLine();
         System.out.print("Salut ! Tu es " +heros.getNom());
         sc.nextLine();
@@ -133,29 +112,35 @@ public class Main{
     // Partie 1 : Arrivée d'Hermes
     
         // INITIALISATION DES NOEUDS
-        String I1p1 = "\nVous vous reveillez en plein milieu d'une piece vide. Vous ne savez pas qui vous etes. Vous avez perdu la mémoire.\n ";
+        String I1p1 = "\nVous vous reveillez en plein milieu d'une piece vide. Vous ne savez pas qui vous etes. Vous avez perdu la mémoire";
         String I1p2 = "Vous voyez un mystérieux personnage arrivé du ciel. Qui est ce mysterieux personnage ?";
-        String I1p3 = "Salut, je suis Hermes, je viens t'aider dans ton aventure. Tu es dans le celebre et redoutable labyrinthe de Dedale.\n";
+        String I1p3 = "Salut, je suis Hermes, je viens t'aider dans ton aventure. Tu es dans le celebre et redoutable labyrinthe de Dedale.";
         String I1p4 = "Considère ce lieu comme ta prison. Dieu t'as enfermé pour avoir commis un crime impardonable !";
         String I1p5 = "Ta mission est de t'echapper ou sinon tu periras a vie dans ce lieu.";
-        String I1p6 = "Si tu as bien compris dis moi OUI, sinon NON :\n1.Oui\n2.Non\n(Choississez entre 1 ou 2)";
-        InnerNode[] I1 = {new InnerNode(I1p1),new InnerNode(I1p2),new InnerNode(I1p3),new InnerNode(I1p4),new InnerNode(I1p5)};
-        DecisionNode dn1 = new DecisionNode(I1p6);
-        for (int i = 0; i<I1.length-1; i++){
-            I1[i].setNodes(I1[i+1]);
-        }
-        I1[4].setNodes(dn1);
-        Node t1 = new TerminalNode("OUI");
-        Node t2 = new TerminalNode("NON");
-        dn1.setNodes(t1,t2);
+        String D1p = "Si tu as bien compris dis moi OUI, sinon NON :\n1.Oui\n2.Non\n(Choississez entre 1 ou 2)";
+        String[] I1p = {I1p1, I1p2, I1p3, I1p4, I1p5};
+        DecisionNode dn1 = new DecisionNode(D1p);
+        InnerNode[] I1 = NodeF.CreateLinkedNodes(I1p);
+        NodeF.Link(I1,dn1);
+        
+        String I2p1 = "Tres bien si tu as bien compris. Commençons";
+        String I2p2 = "Avant de partir, je vais t'offrir un cadeau histoire que tu ne meurs pas dès les premieres secondes.";
+        String D2p = "Je te laisse le choix entre trois armes. Chaque arme possèdes des attributs spécials. Lequel choisis tu :\n1.Epee\n2.Lance\n3.Arc";
+        String[] I2p = {I2p1,I2p2};
+        InnerNode[] I2 = NodeF.CreateLinkedNodes(I2p);
+        DecisionNode dn2 = new DecisionNode(D2p); 
+        NodeF.Link(dn1,1,I2,dn2);
+        dn2.setNodes(t1,t2,t3);
 
-        // Execution DES NOEUDS
-        for (int i = 0; i<I1.length; i++){
-            System.out.print(I1[i].getDescription());
-            sc.nextLine();
-        }
-        System.out.println(dn1.getDescription());
-        dn1.chooseNext();
-    
+        String I2_2p1 = "Tu n'as pas COMRPRIS ???";
+        String I2_2p2 = "Comment dire ...";
+        String I2_2p3 = "Contente toi de ne pas mourir !";
+        String[] I2_2p = {I2_2p1,I2_2p2,I2_2p3};
+        InnerNode[] I2_2 = NodeF.CreateLinkedNodes(I2_2p);
+        NodeF.Link(dn1,2,I2_2);
+        NodeF.Link(I2_2,I2);        
+        //Execution
+        NodeF.Execute(I1[0],sc);
     }
-}                       
+    
+}

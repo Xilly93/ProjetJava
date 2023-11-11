@@ -9,5 +9,9 @@ public class Civil extends Mortel{
         super(Nom);
         //System.out.println("Je suis " + Nom );
     }
+
+    public String getNom(){
+        return this.Nom;
+    }
 }
 

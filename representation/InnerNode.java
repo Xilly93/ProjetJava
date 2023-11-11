@@ -14,7 +14,15 @@ public class InnerNode extends Node {
     public InnerNode(String description){
         super(description);
     }
-    
+
+    public Node[] getNodes(){
+        return nodes;
+    } 
+
+    public void setNodes(Node[] nodes){
+        this.nodes = nodes;
+    } 
+
     public void setNodes(Node n1,Node n2,Node n3,Node n4){
         nodes[0] = n1;
         nodes[1] = n2;

@@ -4,8 +4,7 @@ import univers.Element;
 
 public class Epic extends Creature{
     public Epic(String Nom){
-        super(Nom);
-        //System.out.println("Je suis un monstre Epic !");      
+        super(Nom);   
         this.vie = 3;
     }
 

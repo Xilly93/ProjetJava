@@ -6,7 +6,6 @@ public class Legendaire extends Creature {
 
     public Legendaire(String Nom){
         super(Nom);
-        System.out.println("Je suis un monstre Legendaire !");
         this.vie = 4;
     }
 
