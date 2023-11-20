@@ -121,26 +121,85 @@ public class Main{
         String[] I1p = {I1p1, I1p2, I1p3, I1p4, I1p5};
         DecisionNode dn1 = new DecisionNode(D1p);
         InnerNode[] I1 = NodeF.CreateLinkedNodes(I1p);
+        SoundNode sn1 = new SoundNode(I1[0],"Batterie.wav");
         NodeF.Link(I1,dn1);
         
-        String I2p1 = "Tres bien si tu as bien compris. Commençons";
-        String I2p2 = "Avant de partir, je vais t'offrir un cadeau histoire que tu ne meurs pas dès les premieres secondes.";
+        String I2p1 = "Tres bien. Commençons";
+        String I2p2 = "Avant de partir, je vais t'offrir un cadeau, histoire que tu ne meurs pas dès les premieres secondes.";
         String D2p = "Je te laisse le choix entre trois armes. Chaque arme possèdes des attributs spécials. Lequel choisis tu :\n1.Epee\n2.Lance\n3.Arc";
         String[] I2p = {I2p1,I2p2};
         InnerNode[] I2 = NodeF.CreateLinkedNodes(I2p);
         DecisionNode dn2 = new DecisionNode(D2p); 
         NodeF.Link(dn1,1,I2,dn2);
-        dn2.setNodes(t1,t2,t3);
 
-        String I2_2p1 = "Tu n'as pas COMRPRIS ???";
+        String I2_2p1 = "Tu n'as pas COMPRIS ???";
         String I2_2p2 = "Comment dire ...";
         String I2_2p3 = "Contente toi de ne pas mourir !";
         String[] I2_2p = {I2_2p1,I2_2p2,I2_2p3};
         InnerNode[] I2_2 = NodeF.CreateLinkedNodes(I2_2p);
         NodeF.Link(dn1,2,I2_2);
-        NodeF.Link(I2_2,I2);        
+        NodeF.Link(I2_2,I2);      
+
+        String I3p1 = "Désormais ta destinée ne tient plus qu’à tes propres décisions.";
+        String I3p2 = "Je te souhaite bonne chance pour ton aventure. Nous nous reverrons très sûrement. Enfin ... si tu es toujours vivant.";
+        String I3p3 = "Hermès s’en va...";
+        String I3p4 = "Vous continuez sur le seul couloir qui se présente à vous dans la pièce. Le couloir est ancien et sombre dans le fond mais vous n’avez pas le choix. Seul quelques torches éclairent le lieu. ";
+        String I3p5 ="Au fur et à mesure que vous avancez. Des carcasses de morts et des os humain trainent sur le sol. La poussière enveloppe le lieu, vous ne voyez pas plus de 5 mètres devant vous. Des toiles d'arraignent recouvrent les murs et l'odeur est infame, une sorte d'odeur de chair. Quelque chose cloche ...";
+        String I3p6 ="Vous voyez un cocon en toile d'arraignee au niveau du plafond, un cadavre à l'air d'y être suspendu. Il fait trop sombre pour savoir s'il est vivant ou mort. Vous vous approchez de ce cadavre...";
+        String D3p = "Une arraignée géante tombe du plafond. Elle à l'air aggressive . Que faites vous ...\r\n" + //
+                "1.S'approcher calmement pour voir s'il est inoffensif.\r\n" + //
+                "2.Se rapprocher et lui donner un coup. \r\n" + //
+                "3.Essayer de l'attaquer en prenant de la distance.\r\n";
+
+        
+
+        String[] I3p = {I3p1,I3p2,I3p3,I3p4,I3p5,I3p6};
+        InnerNode[] I3 = NodeF.CreateLinkedNodes(I3p);
+        DecisionNode D3 = new DecisionNode(D3p); 
+        NodeF.Link(dn2,1,I3,D3);
+        NodeF.Link(dn2,2,I3,D3);
+        NodeF.Link(dn2,3,I3,D3);
+
+        String I4p1= "Vous vous approchez lentement de l'arraignée en essayant de la calmer.";
+        String I4p2 = "Hélas, celle ci-bondit sur vous, pour y planter ses griffes, arrachant brusquement la tête de votre corps. Elle finit par envelopper le reste de votre corps dans un cocon pour donner à manger à ses enfants arraignées. Elle avait probablement faim...";
+        String[] I4p= {I4p1,I4p2};
+        InnerNode[] I4 = NodeF.CreateLinkedNodes(I4p);
+        NodeF.Link(D3,1,I4);
+
+        String I4_2p1= "Vous bondissez sur elle en utilisant votre arme et vous réussissez à l'abattre. Bien joué !";
+        String[]I4_2p = {I4_2p1};
+        InnerNode[] I4_2 = NodeF.CreateLinkedNodes(I4_2p);
+        NodeF.Link(D3,2,I4_2);
+
+        String I5p1 = "Vous faites un bond en arrière et lui infligez une attaque a distance.\r\n";
+        String I5p2 = "Elle s'enfuit de douleur vous laissant le passage pour la suite. Bien joué";
+        String[] I5p = {I5p1,I5p2};
+        InnerNode[] I5 = NodeF.CreateLinkedNodes(I5p);
+        NodeF.Link(D3,3,I5);
+
+        String I6p1 = "Vous continuez votre chemin et voyez que le couloir se sépare en deux chemins différents";
+        String D4p = "GAUCHE : Un couloir bien éclairé avec des tableaux de monarques de part et d'autres des murs et un tapis rouge sur le sol qui mène jusqu'au bout du couloir.\nDROITE : Un couloir sombre qui vous à l'air de mener vers un lieu qui a l'air d'être éclairé par la lumière naturelle du soleil.";
+        String[] I6p = {I6p1};
+        DecisionNode D4 = new DecisionNode(D4p);
+        InnerNode[] I6 = NodeF.CreateLinkedNodes(I6p);
+        NodeF.Link(I5,I6);
+        NodeF.Link(I4_2,I6);
+        NodeF.Link(I6,D4);
+
+
         //Execution
-        NodeF.Execute(I1[0],sc);
+        NodeF.Execute(sn1,sc);
+        sc.nextLine();
+        //NodeF.Execute(sn1,sc);
+
+    // Test Sound Node
+    /*
+    Event N1 = new InnerNode("Sound Node test");
+    N1 = new SoundNode(N1);
+    N1.display();
+    Scanner sc = new Scanner(System.in);
+    sc.nextLine();
+    */   
     }
     
 }

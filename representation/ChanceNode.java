@@ -1,7 +1,7 @@
 package representation;
 import java.util.Random;
 
-public class ChanceNode extends InnerNode{
+public class ChanceNode extends InnerNode {
     double[] proba = new double[4];   // Somme des probas vaut 1
     public ChanceNode(String description, double[] proba,Node n1,Node n2,Node n3,Node n4){
         super(description,n1,n2,n3,n4);

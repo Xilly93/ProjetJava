@@ -3,15 +3,18 @@ package representation;
 import java.util.Scanner;
 
 public class NodeF {
-        public static InnerNode[] CreateNodes(String[] descriptions){
-        int n = descriptions.length;
-        InnerNode[] I = new InnerNode[n];
-        for(int i =0; i<n; i++){
-            I[i] = new InnerNode(descriptions[i]);
-            }
-        return I;
+
+    // Creer une liste de innernodes à partir d'une liste de texte
+    public static InnerNode[] CreateNodes(String[] descriptions){
+    int n = descriptions.length;
+    InnerNode[] I = new InnerNode[n];
+    for(int i =0; i<n; i++){
+        I[i] = new InnerNode(descriptions[i]);
+        }
+    return I;
     }
 
+    // Lie tous les InnerNode de la liste un à un
     public static InnerNode[] CreateLinkedNodes(String[] descriptions){
         InnerNode[] I = CreateNodes(descriptions);
         int n = descriptions.length;
@@ -21,33 +24,29 @@ public class NodeF {
         return I;
     }
     
-    public static void Link(DecisionNode d,int numero, InnerNode[] I){ // I est un Linked Nodes et numéro (1,2,3 ou 4)
+    // Liaison DecisionNode - LinkedNode
+    public static void Link(InnerNode d,int numero, InnerNode[] I){ // I est un Linked Nodes et numéro (1,2,3 ou 4) // d est un decision Node ou linked Node
         Node[] DNodes = d.getNodes();
         DNodes[numero-1] = I[0];
         d.setNodes(DNodes); 
     }
-    public static void Link(InnerNode[] I, DecisionNode d){ // I est un Linked Nodes
+    
+    // Liaison LinkedNode - DecisionNode
+    public static void Link(InnerNode[] I, InnerNode d){ // I est un Linked Node
         int n = I.length;
         I[n-1].setNodes(d);
     }
 
-    public static void Link(DecisionNode d1,int numero, InnerNode[] I, DecisionNode d2){ // I est un Linked Nodes
+    // Liaison DecisionOuInnerNode - LinkedNode - DecisionOuInnerNode
+    public static void Link(InnerNode d1,int numero, InnerNode[] I, InnerNode d2){ // I est un Linked Nodes
         Link(d1,numero, I);
         Link(I,d2);
     }
 
+    // Liaison LinkedNode - LinkedNode
     public static void Link(InnerNode[] I1, InnerNode[] I2){ // I est un Linked Nodes
         int n = I1.length;
         I1[n-1].setNodes(I2[0]);
-    }
-
-    
-    
-    public static InnerNode[] CreateNodes(String[] descriptions, DecisionNode dNode){
-        InnerNode[] I = CreateNodes(descriptions);
-        int n = descriptions.length;
-        I[n-1].setNodes(dNode);
-        return I;
     }
 
     public static void Execute(Node node,Scanner sc ){
@@ -56,13 +55,20 @@ public class NodeF {
                 System.out.println("FIN !!");
                 return;
             }
-
             System.out.print(node);
             if (!(node instanceof DecisionNode)){
             sc.nextLine();
             }
-            if(node instanceof TerminalNode){Execute(null, sc); return;}
+            if(node instanceof TerminalNode){Execute((Node)null, sc); return;}
             Execute(node.chooseNext(), sc);
+        }
+    }
+
+    public static void Execute(DecorateurNode node,Scanner sc ){
+        if (node.E instanceof Node){
+            node.display();
+            Node node1 = (Node) node.E;
+            Execute(node1,sc);
         }
     }
 

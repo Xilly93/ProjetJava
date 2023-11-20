@@ -22,16 +22,20 @@ public class DecisionNode extends InnerNode {
     }
 
 
-    
-    @Override
-    public Node chooseNext(){
-
+    public void Decision(){
         while(! (decision == 1 ||decision == 2 ||decision == 3 ||decision == 4 )){
             System.out.print("\nDECISION : ");
             this.decision = sc.nextInt();
         }
-        return nodes[decision-1];
+    }
+    @Override
+    public Node chooseNext(){
+        Decision();
+        return nodes[getDecision()-1];
 
     }
 
+    public int getDecision(){
+        return decision;
+    }
 }

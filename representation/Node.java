@@ -4,7 +4,7 @@ import univers.PersonnageDeBase;
 import univers.Artefactes.Artefacte;
 import univers.Objets.Objet;
 
-public abstract class  Node {
+public abstract class  Node implements Event{
 
     protected String description;
     protected static int nbNodes = 0;
@@ -29,6 +29,7 @@ public abstract class  Node {
         this.objets = objets;
     }
 
+    @Override
     public void display(){
         System.out.println(this.description);
     }
