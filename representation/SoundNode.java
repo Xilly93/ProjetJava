@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class SoundNode extends DecorateurNode{
 
     private String fileName;
+    private float volume;
     public static void playAudio(String filePath,float volume){
         try{
 
@@ -41,14 +42,14 @@ public class SoundNode extends DecorateurNode{
         }
     }
 
-    public SoundNode(Event E,String fileName){
+    public SoundNode(Event E,String fileName,float volume){
         super(E);
         this.fileName= fileName;
+        this.volume = volume;
     }
 
     public void display(){
         String filePath = "representation/Sons/"+this.fileName ;
-        float volume = 0.0f; 
-        playAudio(filePath,volume);
+        playAudio(filePath,this.volume);
     }
 }

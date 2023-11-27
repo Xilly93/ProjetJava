@@ -29,6 +29,56 @@ public abstract class  Node implements Event{
         this.objets = objets;
     }
 
+    public void setUnivers(PersonnageDeBase[] personnages,Arme[] armes,Artefacte[] artefactes,Objet[] objets){
+        this.personnages = personnages;
+        this.armes = armes;
+        this.artefactes = artefactes;
+        this.objets = objets;
+    }
+
+    public void addArme(Arme arme){
+        for ( int i = 0; i<armes.length;i++){
+            if (armes[i]==null){
+                armes[i] = arme;
+                return;
+            }
+        }
+        System.out.println("Plus de places disponibles");
+
+    }
+
+    public void addPerso(PersonnageDeBase perso){
+        for ( int i = 0; i<personnages.length;i++){
+            if (personnages[i]==null){
+                personnages[i] = perso;
+                return;
+            }
+        }
+        System.out.println("Plus de places disponibles");
+
+    }
+
+    public void addObjets(Objet objet){
+        for ( int i = 0; i<objets.length;i++){
+            if (objets[i]==null){
+                objets[i] = objet;
+                return;
+            }
+        }
+        System.out.println("Plus de places disponibles");
+    }
+
+    public void addArteface(Artefacte artefacte){
+        for ( int i = 0; i<artefactes.length;i++){
+            if (artefactes[i]==null){
+                artefactes[i] = artefacte ;
+                return;
+            }
+        }
+        System.out.println("Plus de places disponibles");
+
+    }
+
     @Override
     public void display(){
         System.out.println(this.description);

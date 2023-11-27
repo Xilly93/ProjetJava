@@ -49,16 +49,30 @@ public class NodeF {
         I1[n-1].setNodes(I2[0]);
     }
 
+    public static void Link(InnerNode I1, int numero, Node I2){ // I est un Linked Node
+        I1.setNodes(numero,I2);
+    }
+
     public static void Execute(Node node,Scanner sc ){
         {
+            int flagConditionNode = 0;
             if (node == null){
                 System.out.println("FIN !!");
                 return;
             }
-            System.out.print(node);
-            if (!(node instanceof DecisionNode)){
+            if(node instanceof InnerNode){
+                InnerNode innNode = (InnerNode) node;
+                if (innNode.getCondition()> 0)
+                    flagConditionNode = 1;
+            }
+            if(flagConditionNode == 0)
+                System.out.print(node);
+
+            if (!(node instanceof DecisionNode || flagConditionNode == 1)){
             sc.nextLine();
             }
+
+
             if(node instanceof TerminalNode){Execute((Node)null, sc); return;}
             Execute(node.chooseNext(), sc);
         }

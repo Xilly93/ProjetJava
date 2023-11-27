@@ -49,7 +49,7 @@ Lequel choisissez vous :
 I7:(D4.1)
 Vous progressez dans ce trés long couloir en remarquant que le couloir ressemble à celui d'un chateau. La pièce est trés bien entretenue. Quelqu'un est surement passé par ici...
 //
-Vous remarquez a quel point le chemin est majestueux. Mais vous apercevez une grande porte en or barrant la route. Et à coté, une grande statue dorée garde la porte prenant la forme d'un animal étrange (mi oiseau mi homme); ... Un SPHiNX.
+Vous remarquez a quel point le chemin est majestueux. Mais vous apercevez une grande porte en or barrant la route. Et à coté, une grande statue dorée garde la porte prenant la forme d'un animal étrange (mi oiseau mi homme); ... Un SPHINX.
 //
 Vous touchez la porte et essayez de l'ouvrir. La porte est condamnée... Mince !
 // 
@@ -71,12 +71,12 @@ Réponse Enigme :
 1. l'homme
 2. le singe
 3. la tortue 
-4. Je sais pas
+4. Aucun des trois
 
 I8 : (D4.2, D4.3, D4.4)
 La statue en forme de sphynx se déplace vers vous. Vous la laissez s'approcher de vous mais vous êtes inquiets...
 //
-Elle déploie ses ailes et vous attrape sauvagement avec ses griffes. Votre corps se fait déchiqueter par ses griffes et puis dévoré...
+Elle déploie ses ailes et vous attrape sauvagement avec ses griffes. Votre corps se fait déchiqueter et puis dévoré...
 
 I9 : (D4.2, D4.3, D4.4)
 Les Yeux de la statue en or s'illuminent et au bout de quelques secondes, la gigantesque porte en or s'ouvre lentement devant vous. Vous avez réussi ! Bien joué !
@@ -117,12 +117,12 @@ Les plaisirs les plus simples comme manger, boire ne pouvaient plus être satisf
 //
 J'ai une requête pour vous : je veux être capable de repouvoir manger, de boire. Pour cela vous devez abattre la personne qui m'a maudit : Le dieu Dionysos et je vous ferai part de mon plus grand cadeau, une épée pouvant soumettre une cité entiere.
 // 
-Je ne suis pas en mesure d'y aller moi même. L'entree de sa demeure est scellé par une barrière magique avec un message en langage divin. Personne ne peut y passer à part les dieux.
+Je ne suis pas en mesure d'y aller moi même. L'entree de sa demeure est scellé par une barrière magique avec un message écrit en langage divin. Personne ne peut y passer à part les dieux.
 //
 Récemment, un certain messager Hermès a été aperçu par un de mes gardes, tenant du vin entre les mains.
 Le vin pourrait être la clef pour entrer.
 //
-Prenez la derniere bouteille de vin que mon garde vous donne, et versez le dans le calice à l'entrée dans sa demeure. Je vous laisse le passage vers le prochain couloir, sa demeure est sur la gauche. Revenez sain et sauf avec sa tête coupé et je vous recevrez votre récompense.
+Prenez la derniere bouteille de vin que mon garde vous donne, et versez le dans le calice à l'entrée dans sa demeure. Je vous laisse le passage vers le prochain couloir, sa demeure est sur la gauche. Revenez sain et sauf avec sa tête coupé et vous recevrez votre récompense.
 //
 Vous prenez la bouteille de vin et continuer sur le couloir suivant.
 //
