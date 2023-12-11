@@ -53,6 +53,10 @@ public class NodeF {
         I1.setNodes(numero,I2);
     }
 
+    public static void mettreAjour(InnerNode Inode){
+        return;
+    }
+
     public static void Execute(Node node,Scanner sc ){
         {
             int flagConditionNode = 0;
@@ -62,6 +66,7 @@ public class NodeF {
             }
             if(node instanceof InnerNode){
                 InnerNode innNode = (InnerNode) node;
+                mettreAjour(innNode);
                 if (innNode.getCondition()> 0)
                     flagConditionNode = 1;
             }
