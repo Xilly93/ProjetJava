@@ -2,39 +2,63 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
+import representation.*;
 
 public class Lecture {
-
-    public static void lireFichier() {
-        //List<String> listIInfo = new ArrayList<>();
-        //List<String> listDInfo = new ArrayList<>();
-        List<String> nodeList = new ArrayList<>();
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Quel est le fichier que vous voulez lire:");
-        String lien = sc.nextLine();
+    protected static List<Boolean> isInner = new ArrayList<>();
+    protected static List<Boolean> isDeci = new ArrayList<>();
+    
+    public static List<String> lireFichier(String lien) {
+        List<String> lignes = new ArrayList<>();
         try (BufferedReader fichier = new BufferedReader(new FileReader(new File(lien)))){
             String line;
+            
             while((line =fichier.readLine()) != null) {
-                if (line.startsWith("I")){
-                    //listIInfo.add(extracInfo(line));
-                }else if(line.startsWith("D")) {
-                    //listDInfo.add(extracInfo(line));
-                }
-                nodeList.add(extracInfo(line));
+                if (line.trim().equals(""))
+                    continue;  
+                //System.out.println(line);
+                lignes.add(line);
+                
             }
         }catch (IOException e) {
             e.printStackTrace();
         }
-
-        System.out.println("List node type I :");
-        for (String ligne : nodeList) {
-            System.out.println(ligne);
-        }
+        return lignes;
 
     }
+
+    public static List<String> extractNodeText(String lien){
+        List<String> lignes = lireFichier(lien);
+        for (int i = 0; i<lignes.size();i++){
+            lignes.set(i,extracInfo(lignes.get(i))); 
+        }
+        return lignes;
+    }
+
+    public static List<List<Boolean>> extractNodeType(String lien){
+        List<String> lignes = lireFichier(lien);
+        List<Boolean> isInner = new ArrayList<>();// [0] : isInner, [1] : isDeci, 
+        List<Boolean> isDeci = new ArrayList<>();
+        String ligne;
+        for (int i = 0; i<lignes.size();i++){
+            ligne = lignes.get(i).trim();
+            //System.out.println("ligne " + i + " : " + ligne);
+            isInner.add(false);
+            isDeci.add(false);
+            if (ligne.startsWith("I")){
+                isInner.set(i,true);
+            }else if(ligne.startsWith("D")) {
+                isDeci.set(i,true);
+            }
+        }
+        List<List<Boolean>> nodesType = new ArrayList<>();
+        nodesType.add(isInner);
+        nodesType.add(isDeci);
+        return nodesType;
+    }
+
 
     public static String extracInfo(String line) {
         int index = line.indexOf(":");
@@ -45,7 +69,20 @@ public class Lecture {
         return "";
     }
 
-    public static void main(String[] args) {
-        lireFichier();
+    public static List<Node> CreateNodeList(String lien){
+        List<String> nodesText = extractNodeText(lien);
+        List<List<Boolean>> nodesType = extractNodeType(lien);
+        List<Boolean> isInn = nodesType.get(0);
+        List<Boolean> isDeci = nodesType.get(1);
+        List<Node> nodeList = new ArrayList<>();
+        int n = nodesText.size();
+        for(int i = 0; i<n; i++){
+            if(isInn.get(i))
+                nodeList.add(new InnerNode(nodesText.get(i)));
+            else if(isDeci.get(i))
+                nodeList.add(new DecisionNode(nodesText.get(i)));
         }
+        return nodeList;
+    }
 }
+    

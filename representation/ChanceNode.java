@@ -32,7 +32,7 @@ public class ChanceNode extends InnerNode {
         for (int i = 0; i<4;i++){
             sommeProb += this.proba[i];
             if (rand <= sommeProb){
-                return nodes[i]; 
+                return nodes.get(i); 
                 }   
         }
         return null;

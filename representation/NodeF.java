@@ -1,6 +1,7 @@
 package representation;
 
 import java.util.Scanner;
+import java.util.List;
 
 public class NodeF {
 
@@ -25,10 +26,22 @@ public class NodeF {
     }
     
     // Liaison DecisionNode - LinkedNode
+    public static void Link(InnerNode I1, InnerNode I2){ // I est un Linked Nodes et numéro (1,2,3 ou 4) // d est un decision Node ou linked Node
+        I1.setNodes(I2);
+    }
+
+    public static void Link(InnerNode I1, int numero, Node I2){ // I est un Linked Node
+        I1.setNodes(numero,I2);
+    }
+
+    public static void Link(InnerNode I1, int[] numeros, Node[] allI){ // taille de numeros == taille allI
+        for (int i = 0; i<numeros.length; i++){
+            I1.setNodes(numeros[i],allI[i]);
+        }
+    }
+
     public static void Link(InnerNode d,int numero, InnerNode[] I){ // I est un Linked Nodes et numéro (1,2,3 ou 4) // d est un decision Node ou linked Node
-        Node[] DNodes = d.getNodes();
-        DNodes[numero-1] = I[0];
-        d.setNodes(DNodes); 
+        d.setNodes(numero,I[0]);
     }
     
     // Liaison LinkedNode - DecisionNode
@@ -49,10 +62,6 @@ public class NodeF {
         I1[n-1].setNodes(I2[0]);
     }
 
-    public static void Link(InnerNode I1, int numero, Node I2){ // I est un Linked Node
-        I1.setNodes(numero,I2);
-    }
-
     public static void mettreAjour(Node node){
         //System.out.println("MAJ");
         if ( node.getAction() == 0){
@@ -65,7 +74,7 @@ public class NodeF {
         else{
             node.callAction();
         }
-        System.out.println("MISE A JOUR : Je mets à jour.");
+        //System.out.println("MISE A JOUR : Je mets à jour.");
         if (node.personnages[0] != null){
             System.out.println(node.personnages[0]);
         }

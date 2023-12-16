@@ -2,23 +2,12 @@ package representation;
 import univers.PersonnageDeBase;
 import univers.Armes.Arme;
 import univers.Personnages.Mortels.Heros;
+import java.util.List;
 import java.util.ArrayList;
 public class InnerNode extends Node {
-    protected Node[] nodes = new Node[4];
+    protected List<Node> nodes = new ArrayList<Node>();
     private int condition = 0;
     private int[] StatsMin;
-
-    public InnerNode(String description,Node n1,Node n2,Node n3,Node n4){
-        super(description);
-        nodes[0] = n1;
-        nodes[1] = n2;
-        nodes[2] = n3;
-        nodes[3] = n4;
-    }
-
-    public InnerNode(String description){
-        super(description);
-    }
 
     public InnerNode(){
         super(null);
@@ -29,39 +18,47 @@ public class InnerNode extends Node {
         this.condition = condition;
     }
 
-    public Node[] getNodes(){
+    public InnerNode(String description){
+        super(description);
+    }
+
+    public InnerNode(String description,int condition){
+        super(description);
+        this.condition = condition;
+    }
+
+    public InnerNode(String description,Node n1,Node n2,Node n3,Node n4){
+        super(description);
+        nodes.add(n1);
+        nodes.add(n2);
+        nodes.add(n3);
+        nodes.add(n4);
+    }
+
+    public List<Node> getNodes(){
         return nodes;
+    } 
+    public void setNodes(Node n1){
+        this.nodes.add(n1);
     } 
 
     public void setNodes(Node[] nodes){
-        this.nodes = nodes;
+        for (int i = 0; i<nodes.length ; i++){
+            this.nodes.add(nodes[i]);
+        }
     } 
 
     public void setNodes(int numero, Node node){
-        nodes[numero-1 ] = node;
-    } 
-
-    public void setNodes(Node n1,Node n2,Node n3,Node n4){
-        nodes[0] = n1;
-        nodes[1] = n2;
-        nodes[2] = n3;
-        nodes[3] = n4;
-    } 
-
-    public void setNodes(Node n1){
-        nodes[0] = n1;
-    } 
-
-    public void setNodes(Node n1,Node n2){
-        nodes[0] = n1;
-        nodes[1] = n2;
-    } 
-
-    public void setNodes(Node n1,Node n2,Node n3){
-        nodes[0] = n1;
-        nodes[1] = n2;
-        nodes[2] = n3;
-    } 
+        int n = nodes.size();
+        //System.out.println("InnerNode 1, numero" + numero + " n : " + n);
+        if (n<numero){
+            for (int i = 0; i<numero-n; i++){
+                nodes.add(null);
+            }
+        }
+        nodes.set(numero-1,node);
+        //System.out.println("InnerNode 2");
+    }
 
     public void setCondition( int condition){
         this.condition = condition;
@@ -86,7 +83,7 @@ public class InnerNode extends Node {
                 return 1;   
             }
             else{
-                return 0;
+                return 2;
             }
         }
         return -2;
@@ -94,12 +91,17 @@ public class InnerNode extends Node {
     @Override
     public Node chooseNext(){
         if (this.condition==0){
-            return this.nodes[0];
+            if (this.nodes.isEmpty()){
+                return null;
+            }
+            else{
+                return this.nodes.get(0);
+            }
         }
         else{
             Heros heros = (Heros) this.personnages[0];
-            int condition = this.NextCondition(heros);
-            return this.nodes[condition];
+            int numNextNode = this.NextCondition(heros);
+            return this.nodes.get(numNextNode);
         }
         
     }
