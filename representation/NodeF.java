@@ -26,7 +26,7 @@ public class NodeF {
     }
     
     // Liaison DecisionNode - LinkedNode
-    public static void Link(InnerNode I1, InnerNode I2){ // I est un Linked Nodes et numéro (1,2,3 ou 4) // d est un decision Node ou linked Node
+    public static void Link(InnerNode I1, Node I2){ // I est un Linked Nodes et numéro (1,2,3 ou 4) // d est un decision Node ou linked Node
         I1.setNodes(I2);
     }
 
@@ -75,9 +75,11 @@ public class NodeF {
             node.callAction();
         }
         //System.out.println("MISE A JOUR : Je mets à jour.");
+        /* 
         if (node.personnages[0] != null){
             System.out.println(node.personnages[0]);
         }
+        */
         
         
         return;
@@ -119,5 +121,4 @@ public class NodeF {
             Execute(node1,sc);
         }
     }
-
 }

@@ -1,5 +1,6 @@
 import representation.*;
 
+import Autres.*;
 import univers.*;
 import univers.Armes.*;
 import univers.Artefactes.Artefacte;
@@ -12,66 +13,10 @@ import univers.Personnages.Monstres.Creatures.*;
 import univers.Interfaces.*;
 import java.util.Scanner;
 import java.util.List;
+import java.util.Map;
 
 public class Main {
     public static void main (String args[]){
-        // ----------------------------TEST Nodes--------------------------- 
-        /*
-        // Test Decision Node
-        
-        Node resultNode = dn1.chooseNext();
-        resultNode.display();
-        
-        // Test ChanceNode ; 
-        
-        double[] proba1 = {(double)1/3,(double)1/3,(double)1/3,0} ;
-        ChanceNode cn1 = new ChanceNode("Je suis ChanceNode1",proba1,n1,tn1,tn2);
-        Node resultNodeCn = cn1.chooseNext();
-        resultNodeCn.display();
-        */
-
-        //----------------------------TEST ARTEFACTE-OBJET---------------------------
-        /*
-        Artefacte A1 = Artefacte.Ailes;
-        Artefacte A2 = Artefacte.Casque_De_Hades;
-        Objet O1 = Objet.Yeux_Oedipe;
-        Objet O2 = Objet.Clef_Des_Enfers;
-        */
-       
-        //----------------------------TEST PERSONNAGES---------------------------
-        /*
-        Divinite D1 = new Dieu("Zeus",4,Element.FOUDRE);
-        Element[] ElemList1 = {Element.ANIMAL};
-        Monstre M1 = new Legendaire("Minotaure",ElemList1);
-        Element[] ElemList2 = {Element.FEU,Element.VENT};
-        CreatureVolante M2 = new CreatureVolante("Dragon",5,ElemList2);
-        //Element[] ElemList3 = {Element.ANIMAL};
-        Monstre M3 = new Legendaire("Minotaure",ElemList2);
-
-
-        System.out.println(D1);
-        System.out.println(M1);
-        System.out.println(M2);
-        System.out.println(M3);
-        //System.out.println(M3.equals(M2));
-         */
-        
-        //----------------------------TEST HEROS ----------------------------
-         /*
-        Epee epee = new Epee("Epee en bois",9,4,5);
-        Artefacte a1 = Artefacte.AILES;
-        Artefacte a2 = Artefacte.CASQUE_DE_HADES;
-        Objet o1 = Objet.CLEF_DES_ENFERS;
-        Objet o2 = Objet.TETE_DE_GORGOGNE;
-        Heros heros = new Heros("L");
-        heros.setArme(epee);
-        heros.ajouteArtefacte(a1);
-        heros.ajouteArtefacte(a2);
-        heros.ajouteObjet(o1);
-        heros.ajouteObjet(o2);
-
-        System.out.println(heros);
-          */
 
     //Test Terminal Node
     TerminalNode t1 = new TerminalNode("TERMINAL NODE 1");
@@ -99,20 +44,13 @@ public class Main {
     
     Scanner sc = new Scanner(System.in);
     // Choix du nom du personnage
-        System.out.print("Choisissez le nom de votre Héros : ");
-        String Nom = sc.next();
-        Heros heros = new Heros(Nom);
-        sc.nextLine();
-        System.out.print("Salut ! Tu es " +heros.getNom());
-        sc.nextLine();
-        System.out.print("Es tu prêt à commencer l'aventure ??");
-        sc.nextLine();
-        System.out.print("Super !!");
-        sc.nextLine();
+        Heros heros = new Heros(null);
+        Introduction(heros,sc);
     
         // Partie 1 : Arrivée d'Hermes
 
         // INITIALISATION DES NOEUDS
+        /*
         String I1p1 = "\nVous vous reveillez en plein milieu d'une piece vide. Vous ne savez pas qui vous etes. Vous avez perdu la mémoire";
         String I1p2 = "Vous voyez un mystérieux personnage arrivé du ciel. Qui est ce mysterieux personnage ?";
         String I1p3 = "Salut, je suis Hermes, je viens t'aider dans ton aventure. Tu es dans le celebre et redoutable labyrinthe de Dedale.";
@@ -155,15 +93,6 @@ public class Main {
         DecisionNode D1 = new DecisionNode(D1p);
         DecisionNode D2 = new DecisionNode(D2p); 
         DecisionNode D3 = new DecisionNode(D3p);
-        D2.addPerso(heros);
-        D2.addArme(Epees[0]);
-        D2.addArme(Lances[0]);
-        D2.addArme(Arcs[0]);
-        D2.setAction(1); 
-        D3.setCondition(1);
-        D3.addPerso(heros);  
-        D3.setAllStatsMin(new int[][]{{0,0,0},{5,0,0},{0,5,0}} );
-        D3.setNextChoice(new int[][]{{1,1},{2,1},{3,4}}); // [[victoire,perdu], ...]
         NodeF.Link(I1,D1);
         NodeF.Link(D1,1,I2,D2);
         NodeF.Link(D1,2,I2_2);
@@ -175,11 +104,30 @@ public class Main {
         NodeF.Link(D3,2,I4_2);
         NodeF.Link(D3,3,I5);
         NodeF.Link(D3,4,I4[1]);
+        */
+        Map<String,Node> nodeMap = Lecture.CreateNodeMap("Donnees/Nodes.txt");
+        Map<String,List<String>> nodeNextMap = Lecture.CreateNodeNextMap("Donnees/NextNodes.txt");
+        //AfficheNodeMap(nodeMap,nodeNextMap);
+        Lecture.LinkNodeMap(nodeMap,nodeNextMap);
+        DecisionNode D2 = (DecisionNode) nodeMap.get("D2");
+        DecisionNode D3 = (DecisionNode) nodeMap.get("D3");
+        D2.setNbOfDecision(3);
+        D2.addPerso(heros);
+        D2.addArme(Epees[0]);
+        D2.addArme(Lances[0]);
+        D2.addArme(Arcs[0]);
+        D2.setAction(1);
+        D3.setNbOfDecision(3);
+        D3.setCondition(1);
+        D3.addPerso(heros);
+        D3.setAllStatsMin(new int[][]{{0,0,0},{5,0,0},{0,5,0}} );
+        D3.setNextChoice(new int[][]{{1,1},{2,1},{3,4}}); // [[victoire,perdu], ...]
         
+        
+
         /*for(String ligne : nodesText)
             System.out.println(ligne);
         */
-        List<Node> nodeList = Lecture.CreateNodeList("C:\\Users\\willy\\OneDrive\\Bureau\\Java\\Projet\\Nodes.txt");
         /* 
         NodeF.Link(C2,1,I4[1]);
         NodeF.Link(C2,2,I5);
@@ -196,16 +144,22 @@ public class Main {
 
         //Execution
         System.out.println("EXECUTION");
-        NodeF.Execute(I1[0],sc);
+        NodeF.Execute(nodeMap.get("I1"),sc);
 
-    // Test Sound Node
-    /*
-    Event N1 = new InnerNode("Sound Node test");
-    N1 = new SoundNode(N1);
-    N1.display();
-    Scanner sc = new Scanner(System.in);
-    sc.nextLine();
-    */   
+    }
+
+    public static void Introduction(Heros heros,Scanner sc){
+        System.out.print("Choisissez le nom de votre Héros : ");
+        String Nom = sc.next();
+        heros.setNom(Nom);
+        sc.nextLine();
+        System.out.print("Salut ! Tu es " +heros.getNom());
+        sc.nextLine();
+        System.out.print("Es tu prêt à commencer l'aventure ??");
+        sc.nextLine();
+        System.out.print("Super !!");
+        sc.nextLine();
+
     }
     
 }

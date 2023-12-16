@@ -11,6 +11,7 @@ import univers.Artefactes.Artefacte;
 import univers.Armes.Arme;
 public class DecisionNode extends InnerNode {
     private int decision;
+    private int nbOfDecision;
     private List<List<Integer>> allStatsMin = new ArrayList<>();
     private List<List<Integer>> nextChoice = new ArrayList<>();
 
@@ -35,16 +36,17 @@ public class DecisionNode extends InnerNode {
 
     }
 
-
     public void Decision(){
         Scanner sc = new Scanner(System.in);
-        int nbOfDecision = nodes.size();
         boolean isCorrect;
+        if (nbOfDecision == 0)
+            nbOfDecision = nodes.size();
         do{
             isCorrect = false;
             System.out.print("\nDECISION : ");
             try{
             this.decision = sc.nextInt();
+            //System.out.println("nbOfDecision : " +nbOfDecision);
             if (decision > nbOfDecision || decision<1)
                 throw new IllegalArgumentException();
             }
@@ -81,7 +83,7 @@ public class DecisionNode extends InnerNode {
         return 0;
     }
 
-    public   int getDecision(){
+    public int getDecision(){
         return decision;
     }
 
@@ -100,6 +102,10 @@ public class DecisionNode extends InnerNode {
             heros.setArme(this.armes[decision-1]);
         }
         return;
+    }
+
+    public void setNbOfDecision(int nbOfDecision){
+        this.nbOfDecision = nbOfDecision;
     }
 
     @Override

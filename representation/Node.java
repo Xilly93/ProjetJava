@@ -87,13 +87,11 @@ public abstract class  Node implements Event{
 
     abstract public Node chooseNext();
 
-    /* 
     @Override
     public String toString(){
         this.display();
         return "";
     }
-    */
 
     public int getId(){
         return id;
