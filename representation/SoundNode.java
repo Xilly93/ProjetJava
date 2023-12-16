@@ -40,6 +40,7 @@ public class SoundNode extends DecorateurNode{
         catch(Exception e){
             e.printStackTrace();
         }
+
     }
 
     public SoundNode(Event E,String fileName,float volume){

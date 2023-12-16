@@ -53,27 +53,47 @@ public class NodeF {
         I1.setNodes(numero,I2);
     }
 
-    public static void mettreAjour(InnerNode Inode){
+    public static void mettreAjour(Node node){
+        //System.out.println("MAJ");
+        if ( node.getAction() == 0){
+            return;
+        }
+        if(node instanceof DecisionNode){
+            DecisionNode dnode = (DecisionNode) node;
+            dnode.callAction();
+        }
+        else{
+            node.callAction();
+        }
+        System.out.println("MISE A JOUR : Je mets à jour.");
+        if (node.personnages[0] != null){
+            System.out.println(node.personnages[0]);
+        }
+        
+        
         return;
     }
 
+    
     public static void Execute(Node node,Scanner sc ){
         {
-            int flagConditionNode = 0;
+            //int flagConditionNode = 0;
             if (node == null){
                 System.out.println("FIN !!");
                 return;
             }
+            /* 
             if(node instanceof InnerNode){
                 InnerNode innNode = (InnerNode) node;
-                mettreAjour(innNode);
+                
                 if (innNode.getCondition()> 0)
                     flagConditionNode = 1;
             }
-            if(flagConditionNode == 0)
-                System.out.print(node);
-
-            if (!(node instanceof DecisionNode || flagConditionNode == 1)){
+            */
+            //if(flagConditionNode == 0)
+            node.display();
+            mettreAjour(node);
+            if (!(node instanceof DecisionNode )){
             sc.nextLine();
             }
 

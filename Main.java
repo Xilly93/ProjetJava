@@ -12,7 +12,7 @@ import univers.Personnages.Monstres.Creatures.*;
 import univers.Interfaces.*;
 import java.util.Scanner;
 
-public class Main{
+public class Main {
     public static void main (String args[]){
         // ----------------------------TEST Nodes--------------------------- 
         /*
@@ -110,7 +110,7 @@ public class Main{
         sc.nextLine();
     
         // Partie 1 : Arrivée d'Hermes
-        
+
         // INITIALISATION DES NOEUDS
         String I1p1 = "\nVous vous reveillez en plein milieu d'une piece vide. Vous ne savez pas qui vous etes. Vous avez perdu la mémoire";
         String I1p2 = "Vous voyez un mystérieux personnage arrivé du ciel. Qui est ce mysterieux personnage ?";
@@ -121,7 +121,7 @@ public class Main{
         String[] I1p = {I1p1, I1p2, I1p3, I1p4, I1p5};
         DecisionNode dn1 = new DecisionNode(D1p);
         InnerNode[] I1 = NodeF.CreateLinkedNodes(I1p);
-        SoundNode sn1 = new SoundNode(I1[0],"Interstellar.wav",0.0f);
+        //  SoundNode sn1 = new SoundNode(I1[0],"Interstellar.wav",0.0f);
         NodeF.Link(I1,dn1);
         
         String I2p1 = "Tres bien. Commençons";
@@ -135,7 +135,7 @@ public class Main{
         dn2.addArme(Lances[0]);
         dn2.addArme(Arcs[0]);
         dn2.setAction(1);
-        dn2.setNumArme(0);
+        //dn2.setNumArme(0);
         NodeF.Link(dn1,1,I2,dn2);
 
         String I2_2p1 = "Tu n'as pas COMPRIS ???";
@@ -166,33 +166,33 @@ public class Main{
         NodeF.Link(dn2,2,I3,D3);
         NodeF.Link(dn2,3,I3,D3);
 
+    
         String I4p1= "Vous vous approchez lentement de l'arraignée.";
         String I4p2 = "Hélas, celle ci-bondit sur vous, pour y planter ses griffes, arrachant brusquement la tête de votre corps. Elle finit par envelopper le reste de votre corps dans un cocon pour donner à manger à ses enfants arraignées. Elle avait probablement faim...";
         String[] I4p= {I4p1,I4p2};
         InnerNode[] I4 = NodeF.CreateLinkedNodes(I4p);
-        NodeF.Link(D3,1 ,I4);
-
+        
         String I4_2p1= "Vous bondissez sur elle en utilisant votre arme et vous réussissez à l'abattre. Bien joué !";
         String[]I4_2p = {I4_2p1};
         InnerNode[] I4_2 = NodeF.CreateLinkedNodes(I4_2p);
-
-        InnerNode C1 = new InnerNode(1);
-        C1.addPerso(heros);
-        C1.setStatsMin(new int[]{5,0,0});
-        InnerNode C2 = new InnerNode(1);
-        C2.addPerso(heros);
-        C2.setStatsMin(new int[]{0,0,8});
-
-        NodeF.Link(D3,2,C1);
-        NodeF.Link(C1,1,I4);
-        NodeF.Link(C1,2,I4_2);
-
+        
         String I5p1 = "Vous faites un bond en arrière et lui infligez une attaque a distance.\r\n";
         String I5p2 = "Elle s'enfuit de douleur vous laissant le passage pour la suite. Bien joué";
         String[] I5p = {I5p1,I5p2};
         InnerNode[] I5 = NodeF.CreateLinkedNodes(I5p);
 
-        NodeF.Link(D3,3,C2);
+        D3.setCondition(1);
+        D3.addPerso(heros);
+        NodeF.Link(D3,1 ,I4);
+        NodeF.Link(D3,2,I4_2);
+        NodeF.Link(D3,3,I5);
+        NodeF.Link(D3,4,I4[1]);
+        
+        D3.setAllStatsMin(new int[][]{{0,0,0},{5,0,0},{0,5,0}} );
+        D3.setNextChoice(new int[][]{{1,1},{2,1},{3,4}}); // [[victoire,perdu], ...]
+        
+        
+        /* 
         NodeF.Link(C2,1,I4[1]);
         NodeF.Link(C2,2,I5);
 
@@ -204,11 +204,10 @@ public class Main{
         NodeF.Link(I5,I6);
         NodeF.Link(I4_2,I6);
         NodeF.Link(I6,D4);
-
+         */
 
         //Execution
-        NodeF.Execute(sn1,sc);
-        sc.nextLine();
+        NodeF.Execute(I1[0],sc);
 
     // Test Sound Node
     /*

@@ -3,9 +3,9 @@ import univers.Armes.Arme;
 import univers.PersonnageDeBase;
 import univers.Artefactes.Artefacte;
 import univers.Objets.Objet;
+import univers.Personnages.Mortels.Heros;
 
 public abstract class  Node implements Event{
-
     protected String description;
     protected static int nbNodes = 0;
     protected final int id;
@@ -13,6 +13,7 @@ public abstract class  Node implements Event{
     protected Arme[] armes = new Arme[4];
     protected Artefacte[] artefactes = new Artefacte[4];  
     protected Objet[] objets = new Objet[4];  
+    protected int action = 0;
 
 
     public Node(String description){
@@ -86,11 +87,13 @@ public abstract class  Node implements Event{
 
     abstract public Node chooseNext();
 
+    /* 
     @Override
     public String toString(){
         this.display();
         return "";
     }
+    */
 
     public int getId(){
         return id;
@@ -99,4 +102,34 @@ public abstract class  Node implements Event{
     public String getDescription(){
         return description;
     }
+
+    public void setAction(int action){
+        this.action = action;
+    }
+
+    public int getAction(){
+        return action;
+    }
+    /* 
+    public void setNumArme(int numArme){
+        this.numArme = numArme;
+    }
+
+    public void setNumPerso(int numPerso){
+        this.numPerso = numPerso;
+    }
+
+    public void setNumItem(int numItem){
+        this.numItem = numItem;
+    }
+
+    public void setNumArtefacte(int numArtefacte){
+        this.numArtefacte = numArtefacte;
+    }
+    */
+
+    public void callAction(){
+        return;
+    }
+    
 }

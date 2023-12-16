@@ -2,7 +2,7 @@ package representation;
 import univers.PersonnageDeBase;
 import univers.Armes.Arme;
 import univers.Personnages.Mortels.Heros;
-
+import java.util.ArrayList;
 public class InnerNode extends Node {
     protected Node[] nodes = new Node[4];
     private int condition = 0;
@@ -74,7 +74,7 @@ public class InnerNode extends Node {
     public int getCondition(){
         return this.condition;
     }
-    public int ConditionNext(Heros heros){
+    public int NextCondition(Heros heros){
         if(this.condition==1){
             Arme HerosArme = heros.getArme();
             int attaqueMin = StatsMin[0];
@@ -98,7 +98,7 @@ public class InnerNode extends Node {
         }
         else{
             Heros heros = (Heros) this.personnages[0];
-            int condition = this.ConditionNext(heros);
+            int condition = this.NextCondition(heros);
             return this.nodes[condition];
         }
         
