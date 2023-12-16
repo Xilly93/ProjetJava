@@ -48,69 +48,13 @@ public class Main {
         Introduction(heros,sc);
     
         // Partie 1 : Arrivée d'Hermes
-
-        // INITIALISATION DES NOEUDS
-        /*
-        String I1p1 = "\nVous vous reveillez en plein milieu d'une piece vide. Vous ne savez pas qui vous etes. Vous avez perdu la mémoire";
-        String I1p2 = "Vous voyez un mystérieux personnage arrivé du ciel. Qui est ce mysterieux personnage ?";
-        String I1p3 = "Salut, je suis Hermes, je viens t'aider dans ton aventure. Tu es dans le celebre et redoutable labyrinthe de Dedale.";
-        String I1p4 = "Considère ce lieu comme ta prison. Dieu t'as enfermé pour avoir commis un crime impardonable !";
-        String I1p5 = "Ta mission est de t'echapper ou sinon tu periras a vie dans ce lieu.";
-        String I2p1 = "Tres bien. Commençons";
-        String I2p2 = "Avant de partir, je vais t'offrir un cadeau, histoire que tu ne meurs pas dès les premieres secondes.";
-        String I2_2p1 = "Tu n'as pas COMPRIS ???";
-        String I2_2p2 = "Comment dire ...";
-        String I2_2p3 = "Contente toi de ne pas mourir !";
-        String I3p1 = "Désormais ta destinée ne tient plus qu'à tes propres décisions.";
-        String I3p2 = "Je te souhaite bonne chance pour ton aventure. Nous nous reverrons très sûrement. Enfin ... si tu es toujours vivant.";
-        String I3p3 = "Hermès s'en va...";
-        String I3p4 = "Vous continuez sur le seul couloir qui se présente à vous dans la pièce. Le couloir est ancien et sombre dans le fond mais vous n’avez pas le choix. Seul quelques torches éclairent le lieu. ";
-        String I3p5 ="Au fur et à mesure que vous avancez. Des carcasses de morts et des os humain trainent sur le sol. La poussière enveloppe le lieu, vous ne voyez pas plus de 5 mètres devant vous. Des toiles d'arraignent recouvrent les murs et l'odeur est infame, une sorte d'odeur de chair. Quelque chose cloche ...";
-        String I3p6 ="Vous voyez un cocon en toile d'arraignee au niveau du plafond, un cadavre à l'air d'y être suspendu. Il fait trop sombre pour savoir s'il est vivant ou mort. Vous vous approchez de ce cadavre...";
-        String I4p1= "Vous vous approchez lentement de l'arraignée.";
-        String I4p2 = "Hélas, celle ci-bondit sur vous, pour y planter ses griffes, arrachant brusquement la tête de votre corps. Elle finit par envelopper le reste de votre corps dans un cocon pour donner à manger à ses enfants arraignées. Elle avait probablement faim...";
-        String I4_2p1= "Vous bondissez sur elle en utilisant votre arme et vous réussissez à l'abattre. Bien joué !";
-        String I5p1 = "Vous faites un bond en arrière et lui infligez une attaque a distance.\r\n";
-        String I5p2 = "Elle s'enfuit de douleur vous laissant le passage pour la suite. Bien joué";
-        String D1p = "Si tu as bien compris dis moi OUI, sinon NON :\n1.Oui\n2.Non\n(Choississez entre 1 ou 2)";
-        String D2p = "Je te laisse le choix entre trois armes. Chaque arme possèdes des attributs spécials. Lequel choisis tu :\n1.Epee\n2.Lance\n3.Arc";
-        String D3p = "Une arraignée géante tombe du plafond. Elle à l'air aggressive . Que faites vous ...\r\n1.S'approcher calmement pour voir s'il est inoffensif.\r\n2.Se rapprocher et lui donner un coup. \r\n3.Essayer de l'attaquer en prenant de la distance.\r\n";
-        String[] I1p = {I1p1, I1p2, I1p3, I1p4, I1p5};
-        String[] I2p = {I2p1,I2p2};
-        String[] I2_2p = {I2_2p1,I2_2p2,I2_2p3};
-        String[] I3p = {I3p1,I3p2,I3p3,I3p4,I3p5,I3p6};
-        String[] I4p= {I4p1,I4p2};
-        String[]I4_2p = {I4_2p1};
-        String[] I5p = {I5p1,I5p2};
-        InnerNode[] I1 = NodeF.CreateLinkedNodes(I1p);
-        InnerNode[] I2 = NodeF.CreateLinkedNodes(I2p);
-        InnerNode[] I2_2 = NodeF.CreateLinkedNodes(I2_2p);
-        InnerNode[] I3 = NodeF.CreateLinkedNodes(I3p);
-        InnerNode[] I4 = NodeF.CreateLinkedNodes(I4p);
-        InnerNode[] I4_2 = NodeF.CreateLinkedNodes(I4_2p);
-        InnerNode[] I5 = NodeF.CreateLinkedNodes(I5p);
-        //  SoundNode sn1 = new SoundNode(I1[0],"Interstellar.wav",0.0f);
-        DecisionNode D1 = new DecisionNode(D1p);
-        DecisionNode D2 = new DecisionNode(D2p); 
-        DecisionNode D3 = new DecisionNode(D3p);
-        NodeF.Link(I1,D1);
-        NodeF.Link(D1,1,I2,D2);
-        NodeF.Link(D1,2,I2_2);
-        NodeF.Link(I2_2,I2);   
-        NodeF.Link(D2,1,I3,D3);
-        NodeF.Link(D2,2,I3,D3);
-        NodeF.Link(D2,3,I3,D3);
-        NodeF.Link(D3,1 ,I4);
-        NodeF.Link(D3,2,I4_2);
-        NodeF.Link(D3,3,I5);
-        NodeF.Link(D3,4,I4[1]);
-        */
         Map<String,Node> nodeMap = Lecture.CreateNodeMap("Donnees/Nodes.txt");
         Map<String,List<String>> nodeNextMap = Lecture.CreateNodeNextMap("Donnees/NextNodes.txt");
-        //AfficheNodeMap(nodeMap,nodeNextMap);
+        Lecture.AfficheNodeMap(nodeMap,nodeNextMap);
         Lecture.LinkNodeMap(nodeMap,nodeNextMap);
         DecisionNode D2 = (DecisionNode) nodeMap.get("D2");
         DecisionNode D3 = (DecisionNode) nodeMap.get("D3");
+
         D2.setNbOfDecision(3);
         D2.addPerso(heros);
         D2.addArme(Epees[0]);
