@@ -127,6 +127,18 @@ public abstract class  Node implements Event{
     */
 
     public void callAction(){
+        Heros heros = null;
+        try{
+            if (this.personnages[0]==null)
+                throw new IllegalArgumentException();
+            heros = (Heros) this.personnages[0];
+        }
+        catch(IllegalArgumentException e){ System.out.println("\nERREUR:\n(NodeId:"+this.getId()+"): Absence de l'heros dans le Node \n");}
+        catch(Exception e){e.printStackTrace();}
+
+        if (action==2){
+            heros.ajouteObjet(objets[0]);
+        }
         return;
     }
     

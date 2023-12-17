@@ -75,11 +75,11 @@ public class NodeF {
             node.callAction();
         }
         //System.out.println("MISE A JOUR : Je mets à jour.");
-        /* 
+         
         if (node.personnages[0] != null){
             System.out.println(node.personnages[0]);
         }
-        */
+        
         
         
         return;

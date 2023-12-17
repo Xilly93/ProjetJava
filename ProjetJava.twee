@@ -1,0 +1,119 @@
+:: StoryTitle
+ProjetJava
+
+
+:: StoryData
+{
+  "ifid": "97F3756C-CECB-48B1-BAB3-58CFF2FC3B65",
+  "format": "Harlowe",
+  "format-version": "3.3.7",
+  "start": "Passage sans titre",
+  "zoom": 1
+}
+
+
+:: D1 {"position":"225,750","size":"100,100"}
+[[I6]]
+[[I7]]
+
+
+:: D2 {"position":"225,1125","size":"100,100"}
+[[I10]]
+
+
+:: D3 {"position":"225,2025","size":"100,100"}
+[[I16]]
+[[I17]]
+[[I18]]
+[[I19]]
+
+
+:: D4 {"position":"250,2550","size":"100,100"}
+GAUCHE : Un couloir bien éclairé avec des tableaux de monarques de part et d'autres des murs et un tapis rouge sur le sol qui mène jusqu'au bout du couloir.\nDROITE : Un couloir sombre qui vous à l'air de mener vers un lieu qui a l'air d'être éclairé par la lumière naturelle du soleil.\n1.GAUCHE\n2.DROITE
+
+
+:: I1 {"position":"225,250","size":"100,100"}
+[[I3]]
+
+
+:: I10 {"position":"225,1250","size":"100,100"}
+[[I11]]
+
+
+:: I11 {"position":"225,1375","size":"100,100"}
+[[I12]]
+
+
+:: I12 {"position":"225,1500","size":"100,100"}
+[[I13]]
+
+
+:: I13 {"position":"225,1625","size":"100,100"}
+[[I14]]
+
+
+:: I14 {"position":"225,1750","size":"100,100"}
+[[I15]]
+
+
+:: I15 {"position":"225,1875","size":"100,100"}
+[[D3]]
+
+
+:: I16 {"position":"75,2150","size":"100,100"}
+[[I17]]
+
+
+:: I17 {"position":"100,2300","size":"100,100"}
+
+
+
+:: I18 {"position":"250,2175","size":"100,100"}
+[[I20]]
+
+
+:: I19 {"position":"375,2175","size":"100,100"}
+[[I20]]
+
+
+:: I20 {"position":"250,2300","size":"100,100"}
+[[I21]]
+
+
+:: I21 {"position":"250,2425","size":"100,100"}
+[[D4]]
+
+
+:: I3 {"position":"225,375","size":"100,100"}
+[[I4]]
+
+
+
+:: I4 {"position":"225,500","size":"100,100"}
+[[I5]]
+
+
+:: I5 {"position":"225,625","size":"100,100"}
+[[D1]]
+
+
+:: I6 {"position":"225,875","size":"100,100"}
+[[I9]]
+
+
+:: I7 {"position":"350,875","size":"100,100"}
+[[I8]]
+
+
+:: I8 {"position":"350,1000","size":"100,100"}
+[[I9]]
+
+
+:: I9 {"position":"225,1000","size":"100,100"}
+[[D2]]
+
+
+:: Passage sans titre {"position":"225,125","size":"100,100"}
+Je test
+
+[[Démarre |I1]]

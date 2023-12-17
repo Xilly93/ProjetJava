@@ -36,12 +36,18 @@ I18: Vous bondissez sur elle en utilisant votre arme et vous réussissez à l'ab
 
 I19 : Vous faites un bond en arrière et lui infligez une attaque à distance.\n
 
-I20 : Elle s'enfuit de douleur vous laissant le passage pour la suite. Bien joué
+I20 : Vous avez obtenu de la Cire !
+
+I21 : Vous continuez votre chemin et voyez que le couloir se sépare en deux chemins différents.
 
 D1 : Si tu as bien compris dis moi OUI, sinon NON :\n1.Oui\n2.Non\n(Choisissez entre 1 ou 2);
 
 D2 : Je te laisse le choix entre trois armes. Chaque arme possède des attributs spéciaux. Lequel choisis tu :\n1.Epee\n2.Lance\n3.Arc;
 
 D3 : Une araignée géante tombe du plafond. Elle à l'air agressive . Que faites vous ...\n1.S'approcher calmement pour voir s'il est inoffensif.\n2.Se rapprocher et lui donner un coup. \n3.Essayer de l'attaquer en prenant de la distance.\n
+
+D4 : GAUCHE : Un couloir bien éclairé avec des tableaux de monarques de part et d'autres des murs et un tapis rouge sur le sol qui mène jusqu'au bout du couloir.\nDROITE : Un couloir sombre qui vous à l'air de mener vers un lieu qui a l'air d'être éclairé par la lumière naturelle du soleil.\n1.GAUCHE\n2.DROITE
+
+C1 : Elle s'enfuit de douleur vous laissant le passage pour la suite. Bien joué
 
 T1 : GAME OVER
