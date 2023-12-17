@@ -40,6 +40,64 @@ I20 : Vous avez obtenu de la Cire !
 
 I21 : Vous continuez votre chemin et voyez que le couloir se sépare en deux chemins différents.
 
+I22 : Vous progressez dans ce très long couloir en remarquant que le couloir ressemble à celui d'un château. La pièce est très bien entretenue. Quelqu'un est sûrement passé par ici... Vous remarquez à quel point le chemin est majestueux. Mais vous apercevez une grande porte en or barrant la route. A côté, une grande statue dorée garde la porte prenant la forme d'un animal étrange (mi oiseau mi homme); ... Un SPHINX.
+
+I23: Vous touchez la porte et essayez de l'ouvrir. La porte est condamnée... Mince !
+
+I24 : La statue en or vous regarde et dit d'une voix assourdissante :\n " Pour passer, Mortel, tu devras répondre à cette énigme. Ce n'est pas la force qui fait le mérite d'une nation mais son intelligence. Si tu as juste, la porte s'ouvrira. Si tu as faux, tu mourras.
+
+I25: La statue en forme de Sphinx se déplace vers vous. Elle déploie ses ailes et vous attrape sauvagement avec ses griffes. Votre corps se fait déchiqueter et puis dévoré...
+
+I26 : Les Yeux de la statue en or s'illuminent et au bout de quelques secondes, la gigantesque porte en or s'ouvre lentement devant vous. Vous avez réussi ! Bien joué !
+
+I27 : Dès que la porte s'ouvre, vous progressez dans un magnifique couloir avec des statues de dieux et des décorations destinées aux plus grands rois. Dans cette même pièce, vous apercevez un banquet avec du vin et de la nourriture, mais cette nourriture est dorée et n'a pas l'air comestible. Vous apercevez une deuxième porte que vous ouvrez...
+
+I28 : En ouvrant la porte, vous voyez un trône en hauteur où un vieil homme est assis. Dans la pièce, plusieurs statues dorées y sont présentes.  Deux autres gardes de part et d'autre de la pièce vous aperçoivent et se ruent autour de vous, vous encerclant.\nLe vieil homme vous dit :\n " Qui êtes vous pour entrer dans mon palais ? Aucun homme n'y est passé depuis 200 ans. "
+
+I29 : En lui tendant la main, le vieil homme vous prend la main et vous transforme en statue d'or. Vous vous êtes fait avoir par la malédiction du roi Midas !\n Vous finissez comme les autres statues autour de vous immobile éternellement et finissez par mourir...
+
+I30: " Je vois. Vous êtes un homme rusé et réfléchi qui ne se soumet pas facilement même quand un roi vous le demande." \nLe vieil homme continue de parler :\n" Mon nom est Midas. Je suis le roi de Phrygie. Tout ce qui m'intéressait était l'or. Bien que j'avais atteint un âge où j'étais déjà bien assez riche, l'or était devenu une obsession.. Mais mon vœu est vite devenu une malédiction.\nIncapable de manger, de boire, de toucher, tout ce que je touchais se transformait en or. \nLes plaisirs les plus simples comme manger, boire ne pouvant être satisfaits, je finis pas être affamé éternellement."
+
+I31: Vous tentez de faire tomber un garde ...
+
+I32: Hélas, les gardes vous attrapent et vous vous faites empaler par un des gardes, vous finissez par mourir ...
+
+I33: Vous réussissez à abattre les autres gardes ainsi que le roi. Bien joué ! Vous avez été chanceux ! Il faut savoir prendre des risques.
+
+I34 : J'ai une requête pour vous. Abattez la personne qui m'a maudit : Le dieu Dionysos et je vous ferai part de mon plus grand cadeau, une épée pouvant soumettre une cité entière.\n Je ne suis pas en mesure d'y aller moi même. L'entrée de sa demeure est scellée par une barrière magique avec un message écrit en langage divin. Personne ne peut y passer à part les dieux.
+
+I35 : Récemment, un certain messager Hermès a été aperçu par un de mes gardes, tenant du vin entre les mains.Le vin pourrait être la clef pour entrer.\nPrenez la dernière bouteille de vin que mon garde vous donne, et versez le dans le calice à l'entrée dans sa demeure. Je vous laisse le passage vers le prochain couloir, sa demeure est sur la gauche. Revenez sain et sauf avec sa tête coupée et vous recevrez votre récompense.
+
+I36 : Vous prenez la bouteille de vin et continuez sur le couloir suivant.
+
+I37 : null
+
+I38 : Vous prenez votre arme, et faites une petite entaille dans votre main, versant ainsi du sang dans le calice.
+
+I39 : Hélas, une flèche sort du mur en face de vous, transperçant ainsi votre crâne ...
+
+I40 : Vous prenez le vin que Midas vous a donné et le verse dans le calice. Au bout de quelques secondes. Un passage en pierre s’ouvre devant vous. Vous avez réussi à passer, bien joué.
+
+I41 : Vous n’avez pas de vin. :/
+
+I42 : Vous progressez jusqu’à atteindre une pièce qui ressemble au monde extérieur. La pièce ressemble à une forêt , avec de l'herbe, de la verdure, et  des animaux inoffensifs. Il fait calme et beau . Un ruisseau d’eau vous sépare d’une petite maison en bois et vous voyez un pont en bois et de l’autre côté, la maison.\n
+
+I43 : Vous décochez une flèche et vous réussissez à le toucher. Le centaure tombe du pont vous laissant le passage libéré.
+
+I44 : Vous attendez qu’il vienne mais le centaure décoche une nouvelle flèche en se ruant vers vous et ne le rate pas, transperçant votre coeur …
+
+I45 : Le centaure vous a repéré. Il décoche une flèche au niveau de votre genou et finit par vous écraser brutalement avec ses sabots.
+
+I46 : Le centaure s’avance vers la forêt mais vous a perdu de vue. \nVous sautez sur lui et lui infligez une attaque mortelle. Bien joué.
+
+I47 : Vous vous approchez de Dionysos en tenant la dague à côté de lui. Mais Dionysos se réveille, et aperçoit la dague autour du cou ... Il comprend que quelqu’un veut l’assassiner, et dit d’un ton suppliant: "Attendez, attendez ! Ne me tuez...". Vous lui tranchez la tête d’un coup sec.
+
+I48 : " QUOI ?! Tu ne veux pas faire la fête ?! Moi, le Dieu de l’ivresse de la festivité " Dionysos prend sa dague et vous poignarde dans le ventre. Vous mourrez ensuite
+
+I49 : " Santé ! L’ami ! " Vous buvez tous les deux votre verre et vous vous en resservez un autre. Vous continuez à boire jusqu’à finir la bouteille de vin. Dionysos finit par vous apprécier. " Ecoute, j’ai un cadeau pour toi pour m’avoir fait passé un bon moment. C’est la flûte de Pan. 
+
+I50 : " Mon cher ami Pan, l’a construit pour jouer un morceau à sa femme, la nymphe Syrinx. Mais Syrinx n’est jamais revenu la revoir. Elle a été en fait punie par ses parents à cause de son amour pour Pan et elle a été transformée en roseau. Sans le savoir, Pan a fabriqué cette flûte à partir des branches du roseau où Syrinx a été transformée. Sachant ça, Pan s’est suicidé et m’a prêté sa flûte. Tiens le voilà, c’est un cadeau. de ma part"
+
 D1 : Si tu as bien compris dis moi OUI, sinon NON :\n1.Oui\n2.Non\n(Choisissez entre 1 ou 2);
 
 D2 : Je te laisse le choix entre trois armes. Chaque arme possède des attributs spéciaux. Lequel choisis tu :\n1.Epee\n2.Lance\n3.Arc;
@@ -48,6 +106,28 @@ D3 : Une araignée géante tombe du plafond. Elle à l'air agressive . Que faite
 
 D4 : GAUCHE : Un couloir bien éclairé avec des tableaux de monarques de part et d'autres des murs et un tapis rouge sur le sol qui mène jusqu'au bout du couloir.\nDROITE : Un couloir sombre qui vous à l'air de mener vers un lieu qui a l'air d'être éclairé par la lumière naturelle du soleil.\n1.GAUCHE\n2.DROITE
 
+D5 : ENIGME : quel être, pourvu d'une seule voix, a d'abord quatre jambes le matin, puis deux jambes à midi, et trois jambes le soir ?\n\nRéponse Enigme :\n1. la chimère\n2. le singe\n3.la tortue\n4. l'homme\n5. Le serpent\n6. Le démon
+
+D6 : Le vieil homme se lève de son trône, descend les marches et s'approche de vous lentement (Il a l'air affamée) : \n"Je vois ... vous êtes pareil que moi. Vous avez été puni par les dieux. Venez ! Tenez ma main histoire que je vous en dise plus !"\n\nQue faites vous :\n1.Lui tendre la main\n2.Refuser et ne rien dire\n3.Attaquer les soldats\n4.Essayer de s'enfuir
+
+D7: Vous voyez que le couloir se sépare en deux chemins. Où allez vous :\n1. GAUCHE\n2. DROITE
+
+D8 : Une porte se trouve au bout du couloir mais elle est fermée. Une statue en pierre d'un dieu (Dionysos) présentant un calice se tient à côté de la porte. \n1. Coupez votre main et y verser du sang \n2. Verser du vin dans le calice.
+
+D9 : Vous apercevez une arme dans le fourreau qu’avait le roi (Épée d'Achille). Voulez vous échangez cette arme avec votre arme actuel : \n1.Oui \n2.Non
+
+D10: Vous voyez un centaure (mi homme, mi cheval) avec un arc de l’autre côté du pont. Une flèche atterrit à côté de vous. Il a l’air d’être agressif. Le centaure s'apprête à traverser le pont en courant.\n\nQue faites vous :\n1.Essayer de l’attaquer\n2.Attendre qu’il vienne.\n3.Trouver un abri en se cachant dans la forêt
+
+D11 : Vous trouvez un abri attendant que le centaure vienne à vous mais vous devez choisir une cachette. Que choisissez-vous :\n1.Derrière un arbre\n2.Au dessus d’un arbre pour le surprendre\n3.Dans un buisson\nDerrière un rocher
+
+D12 : Vous traversez le pont et entrez dans la maison discrètement. Vous sentez une forte odeur d'alcool. Un Dieu ivre (Dionysos)  y est en train de dormir sur sa chaise. Vous voyez aussi une dague à côté de lui. Que faites vous : \n1.Le poignarder et lui couper la tête\n2.Le réveiller 
+
+D13 : Vous le réveillez en lui tapant l’épaule. Il garde les yeux fermés et crie. " Bon sang ! Laissez-moi dormir ! ". Vous lui tapez l'épaule encore une fois. Il reprend conscience et lève les yeux vers vous et dit d’un ton festif : " Oh, un ami avec qui festoyer. Qui êtes-vous donc ? Enfin peu importe,ça ne m'intéresse pas. Vous avez l’air d’être un bon l’ami ! Levez-donc un verre avec moi ! ". Il sort une bouteille de vin et sert deux verres. Il tend un verre à vous. Que faites vous\n1.Le boire\n2.Ne pas boire
+
+D14 : Vous retournez au dernier couloir où les chemins se séparent. Où allez vous:\n1.Tout droit\n2.A droite
+
 C1 : Elle s'enfuit de douleur vous laissant le passage pour la suite. Bien joué
+
+C2 : Un des gardes vous blesse. Mais vous essayez ensuite d’attaquer les autres gardes ainsi que le roi.
 
 T1 : GAME OVER

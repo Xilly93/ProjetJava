@@ -4,7 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ChanceNode extends InnerNode {
-    List<Double> proba = new ArrayList<>();   // Somme des probas vaut 1
+    private List<Double> proba = new ArrayList<>();   // Somme des probas vaut 1
+    public static double[] AlmostSure = new double[]{1,0};
+    public static double[] VeryHighChance = new double[]{0.9,0.1};
+    public static double[] HighChance = new double[]{0.9,0.1};
+    public static double[] MiddleChance = new double[]{0.65,0.35};
+    public static double[] FiftyFifty = new double[]{0.5,0.5};
+    public static double[] LowChance = new double[]{0.2,0.8};
 
     public ChanceNode(String description){
         super(description);

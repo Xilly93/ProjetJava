@@ -51,40 +51,56 @@ public class Main {
 
     //-------------------HISTOIRE------------------
     
-    Scanner sc = new Scanner(System.in);
-    // Choix du nom du personnage
-        Heros heros = new Heros(null);
-        Introduction(heros,sc);
+Scanner sc = new Scanner(System.in);
+// Choix du nom du personnage
+    Heros heros = new Heros(null);
+    //Introduction(heros,sc);
+
+    // Partie 1 : Arrivée d'Hermes
+
+    Map<String,Node> nodeMap = Lecture.CreateNodeMap("Donnees/Nodes.txt");
+    Map<String,List<String>> nodeNextMap = Lecture.CreateNodeNextMap("Donnees/NextNodes.txt");
+    Lecture.LinkNodeMap(nodeMap,nodeNextMap);
+    Lecture.addHerosNodeMap(nodeMap,heros);
+    //Lecture.AfficheNodeMap(nodeMap,nodeNextMap);
+
+    DecisionNode D2 = (DecisionNode) nodeMap.get("D2");
+    DecisionNode D3 = (DecisionNode) nodeMap.get("D3");
+    DecisionNode D9 = (DecisionNode) nodeMap.get("D9");
+    ChanceNode C1 = (ChanceNode) nodeMap.get("C1");
+    ChanceNode C2 = (ChanceNode) nodeMap.get("C2");
+    InnerNode I20 = (InnerNode) nodeMap.get("I20");
+    InnerNode I31 = (InnerNode) nodeMap.get("I31");
+    InnerNode I36 = (InnerNode) nodeMap.get("I36");
+    InnerNode I37 = (InnerNode) nodeMap.get("I37");
     
-        // Partie 1 : Arrivée d'Hermes
+    //D2.addPerso(heros);
+    D2.addArme(Epees[0]);
+    D2.addArme(Lances[0]);
+    D2.addArme(Arcs[0]);
+    D2.setAction(1);
+    D3.setNbOfDecision(3);
+    D3.setCondition(1);
+    D3.setAllStatsMin(new int[][]{{0,0,0},{5,0,0},{0,5,0}} );
+    D3.setNextChoice(new int[][]{{1,1},{2,1},{3,4}}); // [[victoire,perdu], ...]
+    D9.setAction(2);
+    D9.addArme(Epees[1]);
 
-        Map<String,Node> nodeMap = Lecture.CreateNodeMap("Donnees/Nodes.txt");
-        Map<String,List<String>> nodeNextMap = Lecture.CreateNodeNextMap("Donnees/NextNodes.txt");
-        //Lecture.AfficheNodeMap(nodeMap,nodeNextMap);
-        Lecture.LinkNodeMap(nodeMap,nodeNextMap);
-        DecisionNode D2 = (DecisionNode) nodeMap.get("D2");
-        DecisionNode D3 = (DecisionNode) nodeMap.get("D3");
-        ChanceNode C1 = (ChanceNode) nodeMap.get("C1");
-        InnerNode I20 = (InnerNode) nodeMap.get("I20");
-        
-        D2.setNbOfDecision(3);
-        D2.addPerso(heros);
-        D2.addArme(Epees[0]);
-        D2.addArme(Lances[0]);
-        D2.addArme(Arcs[0]);
-        D2.setAction(1);
-        D3.setNbOfDecision(3);
-        D3.setCondition(1);
-        D3.addPerso(heros);
-        D3.setAllStatsMin(new int[][]{{0,0,0},{5,0,0},{0,5,0}} );
-        D3.setNextChoice(new int[][]{{1,1},{2,1},{3,4}}); // [[victoire,perdu], ...]
-        C1.setProba(new double[]{0.8,0.2});
-        I20.setAction(2);
-        I20.addPerso(heros);
-        I20.addObjets(Objet.CIRE);
-
-        //Execution
-        NodeF.Execute(nodeMap.get("I1"),sc);
+    C1.setProba(ChanceNode.HighChance);
+    C2.setProba(ChanceNode.AlmostSure);
+    
+    I20.setAction(2);
+    I20.addObjets(Objet.CIRE);
+    I31.setCondition(1);
+    I31.addPerso(heros);
+    I31.setStatsMin(new int[]{5,4,4});
+    I36.setAction(2);
+    I36.addObjets(Objet.VIN);
+    I37.setCondition(2);
+    I37.addObjets(Objet.VIN);
+    //Execution
+    heros.setArme(Epees[0]);
+    NodeF.Execute(nodeMap.get("I36"),sc);
 
     }
     

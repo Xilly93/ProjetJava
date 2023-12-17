@@ -98,8 +98,14 @@ public class DecisionNode extends InnerNode {
 
     public void callAction(){
         Heros heros = (Heros) this.personnages[0];
+        // Choix de prendre une arme parmi les decisions
         if (this.action ==1){
             heros.setArme(this.armes[decision-1]);
+        }
+        // Choix de garder l'arme actuelle ou de changer
+        if (this.action ==2){
+            if(this.decision == 1)
+                heros.setArme(this.armes[0]);
         }
         return;
     }
@@ -124,6 +130,7 @@ public class DecisionNode extends InnerNode {
     public void display(){
         super.display();
         Decision();
+        System.out.println("");
     }
 
 

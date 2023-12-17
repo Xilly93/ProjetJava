@@ -32,9 +32,9 @@ public abstract class Arme {
     @Override 
     public String toString(){
         if (this.Elem==null)
-            return "\n" + this.Nom + "\nAttaques : " + this.attaque + "\nPortee : " + this.portee  + "\nPrecision : " + this.precision + "\nElement : AUCUN" ;
+            return "\n" + this.Nom + "\nAttaque : " + this.attaque + "\nPortee : " + this.portee  + "\nPrecision : " + this.precision + "\nElement : AUCUN" ;
         else
-            return "\n" + this.Nom + "\nAttaques : " + this.attaque + "\nPortee : " + this.portee  + "\nPrecision : " + this.precision + "\nELEMENT : " + this.Elem ;
+            return "\n" + this.Nom + "\nAttaque : " + this.attaque + "\nPortee : " + this.portee  + "\nPrecision : " + this.precision + "\nELEMENT : " + this.Elem ;
     }
 
     // Ameliore les attributs de l'arme

@@ -1,99 +1,12 @@
-I3 :
-Au fur et à mesure que vous avancez. Des carcasses de morts et des os humain trainent sur le sol. La poussière enveloppe le lieu, vous ne voyez pas plus de 5 mètres devant vous. Des toiles d'arraignent recouvrent les murs et l'odeur est infame, une sorte d'odeur de chair. Quelque chose cloche ...
-
-Vous voyez un cocon en toile d'arraignee au niveau du plafond, un cadavre à l'air d'y être suspendu. Il fait trop sombre pour savoir s'il est vivant ou mort. Vous vous approchez de ce cadavre...
-
-D1:
-Des arraignée géantes tombe du plafond. Il à l'air aggressif . Que faites vous ...
-1.S'approcher calmement pour voir s'il est inoffensif.
-2.Se rapprocher et lui donner un coup. ( Si c'est un arc perdu , Si c'est une épée ou une lance )
-3.Essayer de l'attaquer en prenant de la distance  ( Si c'est un arc gagné , Si c'est une épée ou une lance c'est perdu)
-
-C1 : (Probabilité d'avoir gagner de la cire pour Icare )
-
-(d3.1 ) I4 : 
-//
-Vous vous approchez lentement de l'arraignée en essayant de la calmer.
-//
-Hélas, celle ci-bondit sur vous, pour y planter ses griffes, arrachant brusquement la tête de votre corps. Elle finit par envelopper le reste de votre corps dans un cocon pour donner à manger à ses arraignées ... Elle avait probablement faim...
-// 
-GAME OVER
-
-(d3.2) I5:
-Vous bondissez sur elle en utilisant votre arme et vous réussissez à l'abattre. Bien joué !  
-
-(d3.2)I5:
-Malheuresement, vous n'avez qu'une arme à distance. 
-//
-Elle plantee ses griffes sur vous, arrachant brusquement la tête de votre corps. Elle finit par envelopper le reste de votre corps dans un cocon pour donner à manger à de plus petits arraignées. Elle avait probablement faim...
 
 
+I23 :Dès que la porte s'ouvre, vous progressez dans un magnifique couloir avec des statues de dieux et des décorations destinées aux plus grands rois. Dans cette même pièce, vous appercevez un banquet avec du vin et de la nourriture, mais cette nourriture est dorée et n'a pas l'air comestible. Vous appercevez une deuxième porte que vous ouvrez...
+//
+I24 : En ouvrant la porte, vous voyez un trône en hauteur où un viel homme y est un assis. Dans la pièce, plusieurs statues dorées y sont présentes.  Deux autres gardes de part et d'autres de la pièce vous apperçoit et se rue autours de vous, vous encerclant.    
+Le viel homme vous parle :\n " Qui êtes vous pour entrer dans mon palais ? Aucun homme n'y est passé depuis 200 ans. "
 
-(d3.3)I5:
-//
-Vous faites un bond en arrière et lui infligez une attaque a distance.
-//
-Elle s'enfuit de douleur vous laissant le passage pour la suite. Bien joué
+D6 : Le viel homme se lève de son trone, descend les marches et s'approche de vous lentement (Il a l'air affamer) : \n"Je vois ... vous êtes pareil que moi. Vous avez été puni par les dieux. Venez ! Tenez ma main histoire que je vous en dise plus !"
 
-I6: 
-Vous continuez votre chemin et voyez que le couloir se sépare en deux chemins différents:
-GAUCHE : Un couloir bien éclairé avec des tableaux de monarques de part et d'autres des murs et un tapis rouge sur le sol qui mène jusqu'au bout du couloir.
-DROITE : Un couloir sombre qui vous à l'air de mener vers un lieu qui a l'air d'être éclairé par la lumière naturelle du soleil.
-//
-
-D4:
-Lequel choisissez vous : 
-1.GAUCHE
-2.DROITE
-
-I7:(D4.1)
-Vous progressez dans ce trés long couloir en remarquant que le couloir ressemble à celui d'un chateau. La pièce est trés bien entretenue. Quelqu'un est surement passé par ici...
-//
-Vous remarquez a quel point le chemin est majestueux. Mais vous apercevez une grande porte en or barrant la route. Et à coté, une grande statue dorée garde la porte prenant la forme d'un animal étrange (mi oiseau mi homme); ... Un SPHINX.
-//
-Vous touchez la porte et essayez de l'ouvrir. La porte est condamnée... Mince !
-// 
-Brusquement, La statue en or vous regarde droit dans les yeux et vous dit d'une voix grave et assourdissante :
-//
-" Pour passer, Mortel, tu devras répondre à cette énigme. "
-//
-" Ce n'est pas la force qui fait le mérite d'une nation mais son intelligence."
-//
-" Ta réponse sera la clef de cette porte, Mortel."
-//
-" Si tu as juste, la porte s'ouvrira. Si tu as faux, tu mourras. "
-//
-D5:
-
-ENIGME : quel être, pourvu d'une seule voix, a d'abord quatre jambes le matin, puis deux jambes à midi, et trois jambes le soir ?
-
-Réponse Enigme : 
-1. l'homme
-2. le singe
-3. la tortue 
-4. Aucun des trois
-
-I8 : (D4.2, D4.3, D4.4)
-La statue en forme de sphynx se déplace vers vous. Vous la laissez s'approcher de vous mais vous êtes inquiets...
-//
-Elle déploie ses ailes et vous attrape sauvagement avec ses griffes. Votre corps se fait déchiqueter et puis dévoré...
-
-I9 : (D4.2, D4.3, D4.4)
-Les Yeux de la statue en or s'illuminent et au bout de quelques secondes, la gigantesque porte en or s'ouvre lentement devant vous. Vous avez réussi ! Bien joué !
-//
-Dès que la porte s'ouvre, vous progressez dans un magnifique couloir avec des statues de dieux, des décorations en céramique, et une architecture destiné aux plus grands rois. Dans cette même pièce, vous appercevez un banquet avec du vin et de la nourriture, mais cette nourriture est dorée et n'a pas l'air comestible. Personne n'est présente autour de vous. Vous appercevez une deuxième porte que vous ouvrez...
-//
-En ouvrant la porte, vous voyez que le tapis rouge prend fin vers un trône en hauteur où un viel homme y est un assis. Dans la pièce, plusieurs statues dorées y sont présentes avec des visages de personnes effrayées. Il a l'air de s'ennuyer. Deux autres gardes de part et d'autres de la pièce vous apperçoit et se rue autours de vous, vous encerclant.    
-//
-Le viel homme vous parle :
-" Qui êtes vous pour entrer dans mon palais ? Aucun homme n'y est passé depuis 200 ans. "
-//
-Le viel homme se lève de son trone, descend les marches, s'approche de vous trés lentement (Il a l'air affamer) :
-"Je vois ... vous êtes pareil que moi. Vous avez été puni pour avoir été cupide, pour avoir joué avec le pouvoir des Dieux. Quiconque joue avec ce pouvoir finit par le payer."
-
-"Tendez moi votre main mon cher, j'ai quelque chose à vous montrer, un cadeau ."
-
-D6:
 Que faites vous : 
 1.Lui tendre la main
 2.Refuser et ne rien dire
@@ -101,31 +14,19 @@ Que faites vous :
 4.Essayer de s'enfuir
 
 
-I10: (D6.1)
-En lui tendant la main, le vieil homme vous prend la main et vous dit : "Vous voyez la cupidité est un vilain défaut".
-Vous vous tranformez rapidement en une statue en or comme toutes les autres statues autour de vous et finissez par mourir...
+I27 : En lui tendant la main, le vieil homme vous prend la main et vous transforme en statue d'or. Vous vous êtes fait avoir par la malédiction du roi Midas !\nVous finissez comme les autres statues autour de vous immobile éternellement et finissez par mourir...
 
 
-I11: (D6.2)
-" Je vois. vous êtes un homme rusé et réfléchi qui ne se soumet pas facilement même si un roi vous le demande."
-Le viel homme continue de parler :
-" Mon nom est Midas. Je suis roi de Phrygie.
-Vous voyez... Tout ce qui m'intéressait était de vouloir m'enrichir. Bien que j'avais atteint un age où j'étais déjà bien assez riche, l'or était devenue une obsession.. Mais mon voeu est vite devenue une malédiction.
-//
- Incapable de manger, de boire, de toucher, tout ce que je touchais se tranformait en or. 
-Les plaisirs les plus simples comme manger, boire ne pouvaient plus être satisfaits. Aucun homme ne peut survivre sans satisfaire ses besoins les plus primaires.
-//
-J'ai une requête pour vous : je veux être capable de repouvoir manger, de boire. Pour cela vous devez abattre la personne qui m'a maudit : Le dieu Dionysos et je vous ferai part de mon plus grand cadeau, une épée pouvant soumettre une cité entiere.
-// 
-Je ne suis pas en mesure d'y aller moi même. L'entree de sa demeure est scellé par une barrière magique avec un message écrit en langage divin. Personne ne peut y passer à part les dieux.
-//
-Récemment, un certain messager Hermès a été aperçu par un de mes gardes, tenant du vin entre les mains.
-Le vin pourrait être la clef pour entrer.
-//
-Prenez la derniere bouteille de vin que mon garde vous donne, et versez le dans le calice à l'entrée dans sa demeure. Je vous laisse le passage vers le prochain couloir, sa demeure est sur la gauche. Revenez sain et sauf avec sa tête coupé et vous recevrez votre récompense.
-//
+I28: " Je vois. vous êtes un homme rusé et réfléchi qui ne se soumet pas facilement même quand un roi vous le demande."
+Le viel homme continue de parler :\n" Mon nom est Midas. Je suis roi de Phrygie. Tout ce qui m'intéressait était l'or. Bien que j'avais atteint un age où j'étais déjà bien assez riche, l'or était devenue une obsession.. Mais mon voeu est vite devenue une malédiction.\nIncapable de manger, de boire, de toucher, tout ce que je touchais se tranformait en or. \nLes plaisirs les plus simples comme manger, boire ne pouvant être satisfaits, je finis pas être affamé éternellement.
+
+I31 : J'ai une requête pour vous. Abattez la personne qui m'a maudit : Le dieu Dionysos et je vous ferai part de mon plus grand cadeau, une épée pouvant soumettre une cité entiere.\n Je ne suis pas en mesure d'y aller moi même. L'entree de sa demeure est scellé par une barrière magique avec un message écrit en langage divin. Personne ne peut y passer à part les dieux.
+
+I32 : Récemment, un certain messager Hermès a été aperçu par un de mes gardes, tenant du vin entre les mains.Le vin pourrait être la clef pour entrer.\nPrenez la derniere bouteille de vin que mon garde vous donne, et versez le dans le calice à l'entrée dans sa demeure. Je vous laisse le passage vers le prochain couloir, sa demeure est sur la gauche. Revenez sain et sauf avec sa tête coupé et vous recevrez votre récompense.
+
+I33 : 
 Vous prenez la bouteille de vin et continuer sur le couloir suivant.
-//
+
 
 D7:
 Vous voyez que le couloir se sépare en deux chemins. Où allez vous :

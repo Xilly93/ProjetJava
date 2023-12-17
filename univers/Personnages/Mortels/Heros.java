@@ -34,8 +34,17 @@ public class Heros extends Mortel {
         }
         System.out.println("Probleme sortie Objets");
     }
+    public boolean hasObjet(Objet o0){
+        for(Objet o : this.objets){
+            if(o==o0)
+                return true;
+        }
+        return false;
+    }
+
     @Override
     public String toString(){
+        System.out.println("\nINVENTAIRE:");
         System.out.print("\tHeros : " + this.Nom + "\n");
         System.out.print("Arme :" + this.arme + "\n");
         System.out.print("\nArtefactes:\n");

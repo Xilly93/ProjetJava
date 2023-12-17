@@ -76,35 +76,25 @@ public class NodeF {
         }
         //System.out.println("MISE A JOUR : Je mets à jour.");
          
-        if (node.personnages[0] != null){
-            System.out.println(node.personnages[0]);
+        if (node instanceof InnerNode){
+            InnerNode n = (InnerNode) node;
+            if (n.action > 0 || n.getCondition() > 0)
+                System.out.println(node.personnages[0]);
         }
-        
-        
-        
         return;
     }
 
     
     public static void Execute(Node node,Scanner sc ){
         {
-            //int flagConditionNode = 0;
             if (node == null){
                 System.out.println("FIN !!");
                 return;
             }
-            /* 
-            if(node instanceof InnerNode){
-                InnerNode innNode = (InnerNode) node;
-                
-                if (innNode.getCondition()> 0)
-                    flagConditionNode = 1;
-            }
-            */
-            //if(flagConditionNode == 0)
-            node.display();
+            if(!(node.getDescription().equals("null")))
+                node.display();
             mettreAjour(node);
-            if (!(node instanceof DecisionNode )){
+            if (!(node instanceof DecisionNode || node.getDescription().equals("null"))){
             sc.nextLine();
             }
 

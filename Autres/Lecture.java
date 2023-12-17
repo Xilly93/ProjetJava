@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import representation.*;
+import univers.Personnages.Mortels.Heros;
 
 public class Lecture {
     protected static List<Boolean> isInner = new ArrayList<>();
@@ -147,9 +148,18 @@ public class Lecture {
     }
 
     private static <K, V> Map<K, V> createMap(List<K> keys, List<V> values) {
-        if (keys.size() != values.size()) {
+        try{
+            if (keys.size() != values.size()) {
+                throw new IllegalArgumentException();
+            }
+        }
+        catch(IllegalArgumentException e){
+            System.out.println("ERREUR:");
+            System.out.println("nbkeys:" + keys.size() + " keys :" + keys);
+            System.out.println("nbvalues : " + values.size());
             System.out.println("Problème de taille");
         }
+
         Map<K, V> map = new HashMap<>();
         for (int i = 0; i < keys.size(); i++) {
             map.put(keys.get(i), values.get(i));
@@ -178,6 +188,12 @@ public class Lecture {
                 i++;
             }
             
+        }
+    }
+
+    public static void addHerosNodeMap(Map<String,Node> nodeMap,Heros heros){
+        for (String key : nodeMap.keySet()){
+            nodeMap.get(key).addPerso(heros);
         }
     }
     public static void main(String[] args){

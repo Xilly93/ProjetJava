@@ -139,6 +139,10 @@ public abstract class  Node implements Event{
         if (action==2){
             heros.ajouteObjet(objets[0]);
         }
+        if (action == 3){
+            heros.setArme(armes[0]);
+        }
+        
         return;
     }
     

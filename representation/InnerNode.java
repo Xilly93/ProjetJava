@@ -71,8 +71,10 @@ public class InnerNode extends Node {
     public int getCondition(){
         return this.condition;
     }
-    public int NextCondition(Heros heros){
+    public int NextCondition(){
+        Heros heros = (Heros) this.personnages[0];
         if(this.condition==1){
+            if (heros.getArme() == null){System.out.println("ERREUR : Le heros n'as pas d'arme.");}
             Arme HerosArme = heros.getArme();
             int attaqueMin = StatsMin[0];
             int porteeMin = StatsMin[1];
@@ -81,6 +83,15 @@ public class InnerNode extends Node {
             //System.out.println("StatsMin :\nPrec : " + precMin + "\tAttaque : " + attaqueMin + "\tPortee :  " + porteeMin );
             if( HerosArme.getPrecision() >= precMin && HerosArme.getAttaque() >= attaqueMin && HerosArme.getPortee() >= porteeMin ){
                 return 1;   
+            }
+            else{
+                return 2;
+            }
+        }
+
+        else if( this.condition == 2){
+            if (heros.hasObjet(this.objets[0])){
+                return 1;
             }
             else{
                 return 2;
@@ -99,9 +110,8 @@ public class InnerNode extends Node {
             }
         }
         else{
-            Heros heros = (Heros) this.personnages[0];
-            int numNextNode = this.NextCondition(heros);
-            return this.nodes.get(numNextNode);
+            int numNextNode = this.NextCondition();
+            return this.nodes.get(numNextNode-1);
         }
         
     }
