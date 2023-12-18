@@ -72,7 +72,7 @@ public class DecisionNode extends InnerNode {
             int attaqueMin = StatsMin.get(0);
             int porteeMin = StatsMin.get(1);
             int precMin = StatsMin.get(2);
-
+            //System.out.println(StatsMin);
             if( HerosArme.getPrecision() >= precMin && HerosArme.getAttaque() >= attaqueMin && HerosArme.getPortee() >= porteeMin ){
                 return nextChoice.get(decision-1).get(0);   
             }
@@ -117,9 +117,11 @@ public class DecisionNode extends InnerNode {
     @Override
     public Node chooseNext(){
         //callAction();
-        if (this.getCondition() == 0 )
+        if (this.getCondition() == 0 ){
             return nodes.get(decision-1);
+        }
         else{
+            //System.out.println("condition :" + this.getCondition());
             int numNextNode = NextConditionUnderDecision(decision,getCondition()); // A FAIRE : Modifier decision
             return nodes.get(numNextNode-1);
         }

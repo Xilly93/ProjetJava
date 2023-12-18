@@ -76,27 +76,59 @@ I38 : Vous prenez votre arme, et faites une petite entaille dans votre main, ver
 
 I39 : Hélas, une flèche sort du mur en face de vous, transperçant ainsi votre crâne ...
 
-I40 : Vous prenez le vin que Midas vous a donné et le verse dans le calice. Au bout de quelques secondes. Un passage en pierre s’ouvre devant vous. Vous avez réussi à passer, bien joué.
+I40 : Vous prenez le vin que Midas vous a donné et le verse dans le calice. Au bout de quelques secondes. Un passage en pierre s'ouvre devant vous. Vous avez réussi à passer, bien joué.
 
-I41 : Vous n’avez pas de vin. :/
+I41 : Vous n'avez pas de vin. :/
 
-I42 : Vous progressez jusqu’à atteindre une pièce qui ressemble au monde extérieur. La pièce ressemble à une forêt , avec de l'herbe, de la verdure, et  des animaux inoffensifs. Il fait calme et beau . Un ruisseau d’eau vous sépare d’une petite maison en bois et vous voyez un pont en bois et de l’autre côté, la maison.\n
+I42 : Vous progressez jusqu'à atteindre une pièce qui ressemble au monde extérieur. La pièce ressemble à une forêt , avec de l'herbe, de la verdure, et  des animaux inoffensifs. Il fait calme et beau . Un ruisseau d'eau vous sépare d'une petite maison en bois et vous voyez un pont en bois et de l'autre côté, la maison.\n
 
 I43 : Vous décochez une flèche et vous réussissez à le toucher. Le centaure tombe du pont vous laissant le passage libéré.
 
-I44 : Vous attendez qu’il vienne mais le centaure décoche une nouvelle flèche en se ruant vers vous et ne le rate pas, transperçant votre coeur …
+I44 : Vous attendez qu'il vienne mais le centaure décoche une nouvelle flèche en se ruant vers vous et ne le rate pas, transperçant votre coeur ...
 
 I45 : Le centaure vous a repéré. Il décoche une flèche au niveau de votre genou et finit par vous écraser brutalement avec ses sabots.
 
-I46 : Le centaure s’avance vers la forêt mais vous a perdu de vue. \nVous sautez sur lui et lui infligez une attaque mortelle. Bien joué.
+I46 : Le centaure s'avance vers la forêt mais vous a perdu de vue. \nVous sautez sur lui et lui infligez une attaque mortelle. Bien joué.
 
-I47 : Vous vous approchez de Dionysos en tenant la dague à côté de lui. Mais Dionysos se réveille, et aperçoit la dague autour du cou ... Il comprend que quelqu’un veut l’assassiner, et dit d’un ton suppliant: "Attendez, attendez ! Ne me tuez...". Vous lui tranchez la tête d’un coup sec.
+I47 : Vous vous approchez de Dionysos en tenant la dague à côté de lui. Mais Dionysos se réveille, et aperçoit la dague autour du cou ... Il comprend que quelqu'un veut l'assassiner, et dit d'un ton suppliant: "Attendez, attendez ! Ne me tuez...". Vous lui tranchez la tête d'un coup sec.
 
-I48 : " QUOI ?! Tu ne veux pas faire la fête ?! Moi, le Dieu de l’ivresse de la festivité " Dionysos prend sa dague et vous poignarde dans le ventre. Vous mourrez ensuite
+I48 : " QUOI ?! Tu ne veux pas faire la fête ?! Moi, le Dieu de l'ivresse de la festivité " Dionysos prend sa dague et vous poignarde dans le ventre. Vous mourrez ensuite
 
-I49 : " Santé ! L’ami ! " Vous buvez tous les deux votre verre et vous vous en resservez un autre. Vous continuez à boire jusqu’à finir la bouteille de vin. Dionysos finit par vous apprécier. " Ecoute, j’ai un cadeau pour toi pour m’avoir fait passé un bon moment. C’est la flûte de Pan. 
+I49 : " Santé ! L'ami ! " Vous buvez tous les deux votre verre et vous vous en resservez un autre. Vous continuez à boire jusqu'à finir la bouteille de vin. Dionysos finit par vous apprécier. " Ecoute, j'ai un cadeau pour toi pour m'avoir fait passé un bon moment. C'est la flûte de Pan. 
 
-I50 : " Mon cher ami Pan, l’a construit pour jouer un morceau à sa femme, la nymphe Syrinx. Mais Syrinx n’est jamais revenu la revoir. Elle a été en fait punie par ses parents à cause de son amour pour Pan et elle a été transformée en roseau. Sans le savoir, Pan a fabriqué cette flûte à partir des branches du roseau où Syrinx a été transformée. Sachant ça, Pan s’est suicidé et m’a prêté sa flûte. Tiens le voilà, c’est un cadeau. de ma part"
+I50 : " Mon cher ami Pan, l'a construit pour jouer un morceau à sa femme, la nymphe Syrinx. Mais Syrinx n'est jamais revenu la revoir. Elle a été en fait punie par ses parents à cause de son amour pour Pan et elle a été transformée en roseau. Sans le savoir, Pan a fabriqué cette flûte à partir des branches du roseau où Syrinx a été transformée. Sachant ça, Pan s'est suicidé et m'a prêté sa flûte. Tiens le voilà, c'est un cadeau. de ma part"
+
+I51 : Vous revenez voir Midas en lui montrant la tête de Dionysos. Celui-ci tend sa main et vous remercie d'une poignée de main et dit : \n" Dieu merci, la malédiction est levée. Je vous dois une fière chandelle. Je peux désormais manger et boire sans crainte. Prenez ceci en gage de ma gratitude."
+
+I52 : Vous acceptez et continuez votre chemin.
+
+I53: Vous continuez votre progression... Alors que l'obscurité règne plus que jamais, une lueur céleste apparaît. Cette lumière provient de l'extérieur. Vous suivez cette lumière.\n Vous arrivez à une grande pièce avec un plafond très haut mais surtout un accès vers l'extérieur depuis le plafond. Il fait jour. Le ciel est dégagé, et le soleil tapant. Vous entendez du bruit ...
+
+I53 : Au coin de la pièce, deux hommes parlent : un vieil homme et un jeune aux cheveux dorés. A sa gauche , vous voyez une table, avec différents outils . Vous remarquez que le jeune homme possède des ailes blanches en cire et en métal accroché à son dos, et que le vieil homme essaye d'ajuster ces ailes pour qu'elles fonctionnent bien. Vous écoutez la conversation ...
+
+I54 : " Ne t'en fais pas Icare, une fois ces ailes terminées, nous pourrons sortir de là. Et là-bas, tu pourras y voir pour la première fois la mer, le soleil, les champs étendus du royaume de Grèce, ainsi que ses prairies et ses forêts verdoyantes. Je t'aime filston, mais tu dois t'échapper. tu n'as rien à faire dans ce labyrinthe avec moi ! Mais j'ai besoin de cire ..."
+
+I55 : L'homme s'approche de vous lentement et saisit votre arme, ne vous permettant plus de la récupérer , et dit : " Pardonnez-moi, je ne peux pas prendre de risques. C'est pour protéger mon fils." Vous réagissez en bondissant en arrière, mais celui-ci vous poignarde quatre fois dans le ventre. Vous finissez par saigner et mourir ...
+
+I56 : Vous n'avez pas de cire :\
+
+I57 : Hélas, celui-ci a réussi à esquiver et vous poignarde dans le ventre avec sa dague...
+
+I58 :Vous arrivez à lui infliger un coup fatal, et finissez par le planter dans le coeur. Son fils, effrayé, regardant la mort de son père avec effroi, vous supplie en pleurant de l'épargner. Vous vous approchez de lui, et vous arrachez les ailes en cire d'Icare implantées dans son dos. Ce dernier crie de douleurs, et finit par vous mourir vidé de son sang. Vous n'avez pas de coeur ...
+
+I59 : Vous avez obtenu les ailes d'Icare
+
+I60 : Vous tendez la cire que vous avez obtenue et montrer que vous êtes inoffensif. Le vieil homme range sa dague et dit:\n" Vous êtes donc aussi un humain comme moi. Faites attention, rare sont les personnes inoffensives dans ce labyrinthe. \nJe suis Dédale, le créateur de ce lieu. Avant que vous me le disiez, Non , je ne connais pas la sortie de ce lieu. Ce lieu a été construit pour enfermer un certain monstre, le Minotaure. Si vous entrez dans ce labyrinthe , vous ne pourrez plus jamais en sortir , enfin plutôt..., si vous n'avez pas les cartes comme moi maintenant.
+
+I61 : Zeus m'a enfermé ici malgré toutes les offrandes et services que j'ai pu offrir aux Dieux. Maudits soient les Dieux. Ingrats et cruels, ils ne voient pas tout ce que j'ai fait pour eux. Et en échange, ils m'enferment dans ce labyrinthe, MON propre labyrinthe .
+
+I62 : Écoutez, je vois que vous avez de la cire. J'ai peut être une solution pour pouvoir nous faire sortir de cette prison.\nVous voyez, de cette pièce, nous pouvons voir l'extérieur. Cependant, les murs sont trop hauts. Impossible de les atteindre en grimpant.
+
+I63 : Au bout de quelques minutes, Dédale fini de régler les ailes d'Icare. Il dit : " Enfin ! Tu vas pouvoir sortir mon fils ! Si tu sors, trouve une femme nommée Arianne et dis lui que son vieil ami a perdu le fil avec le temps. Elle saura comment me trouver. Et surtout, ne vole ni trop près du soleil, car sa chaleur fond la cire de tes ailes, ni trop près de la mer, car l'humidité aura le même effet. "
+
+I64 : Icare se prépare et s'élance avec enthousiasme jusqu'à pouvoir utiliser ses ailes. Il continue de voler en faisant le tour de la pièce et prend de la hauteur.\nDédale est réjoui, voyant  que son invention fonctionne mais celui s'inquiète car Icare prend trop de hauteur. Il crie : " Icare, ne vole pas trop près du soleil ou tes ailes fondront. "
+
+I65 : Icare s'amuse et ne suit plus les instructions de son père, hypnotisé par le plaisir de voler. Il commence à prendre encore de la hauteur mais celui - ci perd le contrôle. Les ailes commencent à fondre à cause du soleil et ce dernier tombe du ciel, de plus de cent mètres et atterrit violemment au sol, le laissant pour mort.
 
 D1 : Si tu as bien compris dis moi OUI, sinon NON :\n1.Oui\n2.Non\n(Choisissez entre 1 ou 2);
 
@@ -110,24 +142,31 @@ D5 : ENIGME : quel être, pourvu d'une seule voix, a d'abord quatre jambes le ma
 
 D6 : Le vieil homme se lève de son trône, descend les marches et s'approche de vous lentement (Il a l'air affamée) : \n"Je vois ... vous êtes pareil que moi. Vous avez été puni par les dieux. Venez ! Tenez ma main histoire que je vous en dise plus !"\n\nQue faites vous :\n1.Lui tendre la main\n2.Refuser et ne rien dire\n3.Attaquer les soldats\n4.Essayer de s'enfuir
 
-D7: Vous voyez que le couloir se sépare en deux chemins. Où allez vous :\n1. GAUCHE\n2. DROITE
+D7: Vous voyez que le couloir se sépare en deux chemins. Où allez vous :\n1. GAUCHE\n2. DROITE\n3.TOUT DROIT
 
 D8 : Une porte se trouve au bout du couloir mais elle est fermée. Une statue en pierre d'un dieu (Dionysos) présentant un calice se tient à côté de la porte. \n1. Coupez votre main et y verser du sang \n2. Verser du vin dans le calice.
 
-D9 : Vous apercevez une arme dans le fourreau qu’avait le roi (Épée d'Achille). Voulez vous échangez cette arme avec votre arme actuel : \n1.Oui \n2.Non
+D9 : Vous apercevez une arme dans le fourreau qu'avait le roi (Épée d'Achille). Voulez vous échangez cette arme avec votre arme actuel : \n1.Oui \n2.Non
 
-D10: Vous voyez un centaure (mi homme, mi cheval) avec un arc de l’autre côté du pont. Une flèche atterrit à côté de vous. Il a l’air d’être agressif. Le centaure s'apprête à traverser le pont en courant.\n\nQue faites vous :\n1.Essayer de l’attaquer\n2.Attendre qu’il vienne.\n3.Trouver un abri en se cachant dans la forêt
+D10: Vous voyez un centaure (mi homme, mi cheval) avec un arc de l'autre côté du pont. Une flèche atterrit à côté de vous. Il a l'air d'être agressif. Le centaure s'apprête à traverser le pont en courant.\n\nQue faites vous :\n1.Essayer de l'attaquer\n2.Attendre qu'il vienne.\n3.Trouver un abri en se cachant dans la forêt
 
-D11 : Vous trouvez un abri attendant que le centaure vienne à vous mais vous devez choisir une cachette. Que choisissez-vous :\n1.Derrière un arbre\n2.Au dessus d’un arbre pour le surprendre\n3.Dans un buisson\nDerrière un rocher
+D11 : Vous trouvez un abri attendant que le centaure vienne à vous mais vous devez choisir une cachette. Que choisissez-vous :\n1.Derrière un arbre\n2.Au dessus d'un arbre pour le surprendre\n3.Dans un buisson\nDerrière un rocher
 
 D12 : Vous traversez le pont et entrez dans la maison discrètement. Vous sentez une forte odeur d'alcool. Un Dieu ivre (Dionysos)  y est en train de dormir sur sa chaise. Vous voyez aussi une dague à côté de lui. Que faites vous : \n1.Le poignarder et lui couper la tête\n2.Le réveiller 
 
-D13 : Vous le réveillez en lui tapant l’épaule. Il garde les yeux fermés et crie. " Bon sang ! Laissez-moi dormir ! ". Vous lui tapez l'épaule encore une fois. Il reprend conscience et lève les yeux vers vous et dit d’un ton festif : " Oh, un ami avec qui festoyer. Qui êtes-vous donc ? Enfin peu importe,ça ne m'intéresse pas. Vous avez l’air d’être un bon l’ami ! Levez-donc un verre avec moi ! ". Il sort une bouteille de vin et sert deux verres. Il tend un verre à vous. Que faites vous\n1.Le boire\n2.Ne pas boire
+D13 : Vous le réveillez en lui tapant l'épaule. Il garde les yeux fermés et crie. " Bon sang ! Laissez-moi dormir ! ". Vous lui tapez l'épaule encore une fois. Il reprend conscience et lève les yeux vers vous et dit d'un ton festif : " Oh, un ami avec qui festoyer. Qui êtes-vous donc ? Enfin peu importe,ça ne m'intéresse pas. Vous avez l'air d'être un bon l'ami ! Levez-donc un verre avec moi ! ". Il sort une bouteille de vin et sert deux verres. Il tend un verre à vous. Que faites vous\n1.Le boire\n2.Ne pas boire
 
 D14 : Vous retournez au dernier couloir où les chemins se séparent. Où allez vous:\n1.Tout droit\n2.A droite
 
+D15 : Le vieil homme vous aperçoit, prend sa dague et vous menace avec son arme en criant : "Qui êtes-vous ?! Que voulez-vous ? Est-ce les dieux qui vous envoient pour nous tuer ? " \n1: Montrez que vous êtes inoffensif en lâchant votre arme\n2: Lui montre la cire que vous avez\n3: Essayer de le tuer et arracher les ailes d'Icare
+
+D16 :J'ai conçu pour mon fils ,Icare, des ailes. Je veux ce qu'il y a de mieux pour mon fils. Aidez-moi à le faire sortir et je vous aiderai en retour. Avec la cire, mon fils pourra sortir de ce lieu et voler au- dessus de ses murs. Donnez la moi, et je pourrais aussi fabriquer des ailes pour vous.\n1.Lui donner la cire\n2.Poignarder Dédale et arracher les ailes d'Icare
+
+
 C1 : Elle s'enfuit de douleur vous laissant le passage pour la suite. Bien joué
 
-C2 : Un des gardes vous blesse. Mais vous essayez ensuite d’attaquer les autres gardes ainsi que le roi.
+C2 : Un des gardes vous blesse. Mais vous essayez ensuite d'attaquer les autres gardes ainsi que le roi.
+
+C3 : Vous vous ruez brusquement vers lui en lui donnant un coup avec votre arme.
 
 T1 : GAME OVER

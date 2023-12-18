@@ -54,7 +54,7 @@ public class Main {
 Scanner sc = new Scanner(System.in);
 // Choix du nom du personnage
     Heros heros = new Heros(null);
-    //Introduction(heros,sc);
+    Introduction(heros,sc);
 
     // Partie 1 : Arrivée d'Hermes
 
@@ -67,12 +67,15 @@ Scanner sc = new Scanner(System.in);
     DecisionNode D2 = (DecisionNode) nodeMap.get("D2");
     DecisionNode D3 = (DecisionNode) nodeMap.get("D3");
     DecisionNode D9 = (DecisionNode) nodeMap.get("D9");
+    DecisionNode D10 = (DecisionNode) nodeMap.get("D10");
+    DecisionNode D11 = (DecisionNode) nodeMap.get("D11");
     ChanceNode C1 = (ChanceNode) nodeMap.get("C1");
     ChanceNode C2 = (ChanceNode) nodeMap.get("C2");
     InnerNode I20 = (InnerNode) nodeMap.get("I20");
     InnerNode I31 = (InnerNode) nodeMap.get("I31");
     InnerNode I36 = (InnerNode) nodeMap.get("I36");
     InnerNode I37 = (InnerNode) nodeMap.get("I37");
+    InnerNode I52 = (InnerNode) nodeMap.get("I52");
     
     //D2.addPerso(heros);
     D2.addArme(Epees[0]);
@@ -85,6 +88,14 @@ Scanner sc = new Scanner(System.in);
     D3.setNextChoice(new int[][]{{1,1},{2,1},{3,4}}); // [[victoire,perdu], ...]
     D9.setAction(2);
     D9.addArme(Epees[1]);
+    D10.setCondition(1);
+    D10.setAllStatsMin(new int[][]{{0,0,9},{0,0,0},{0,5,0}} );
+    D10.setNextChoice(new int[][]{{1,2},{2,2},{3,3}});
+    D11.setNbOfDecision(4);
+    D11.setCondition(1);
+    D11.setAllStatsMin(new int[][]{{9,0,0},{7,0,7},{0,9,0},{0,7,7}});
+    D11.setNextChoice(new int[][]{{2,1},{2,1},{2,1},{2,1}});
+
 
     C1.setProba(ChanceNode.HighChance);
     C2.setProba(ChanceNode.AlmostSure);
@@ -98,9 +109,12 @@ Scanner sc = new Scanner(System.in);
     I36.addObjets(Objet.VIN);
     I37.setCondition(2);
     I37.addObjets(Objet.VIN);
+    I52.setAction(3);
+    I52.addArme(Epees[1]);
+
     //Execution
     heros.setArme(Epees[0]);
-    NodeF.Execute(nodeMap.get("I36"),sc);
+    NodeF.Execute(nodeMap.get("I1"),sc);
 
     }
     

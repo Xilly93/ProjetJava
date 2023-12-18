@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.List;
 
 public class NodeF {
-
+    /*
     // Creer une liste de innernodes à partir d'une liste de texte
     public static InnerNode[] CreateNodes(String[] descriptions){
     int n = descriptions.length;
@@ -24,7 +24,7 @@ public class NodeF {
         }
         return I;
     }
-    
+    */
     // Liaison DecisionNode - LinkedNode
     public static void Link(InnerNode I1, Node I2){ // I est un Linked Nodes et numéro (1,2,3 ou 4) // d est un decision Node ou linked Node
         I1.setNodes(I2);
@@ -39,7 +39,7 @@ public class NodeF {
             I1.setNodes(numeros[i],allI[i]);
         }
     }
-
+    /*
     public static void Link(InnerNode d,int numero, InnerNode[] I){ // I est un Linked Nodes et numéro (1,2,3 ou 4) // d est un decision Node ou linked Node
         d.setNodes(numero,I[0]);
     }
@@ -61,7 +61,7 @@ public class NodeF {
         int n = I1.length;
         I1[n-1].setNodes(I2[0]);
     }
-
+     */
     public static void mettreAjour(Node node){
         //System.out.println("MAJ");
         if ( node.getAction() == 0){
