@@ -1,5 +1,8 @@
 package representation;
 import univers.Armes.Arme;
+
+import java.util.ArrayList;
+import java.util.List;
 import univers.PersonnageDeBase;
 import univers.Artefactes.Artefacte;
 import univers.Objets.Objet;
@@ -12,7 +15,7 @@ public abstract class  Node implements Event{
     protected PersonnageDeBase[] personnages = new PersonnageDeBase[10];
     protected Arme[] armes = new Arme[4];
     protected Artefacte[] artefactes = new Artefacte[4];  
-    protected Objet[] objets = new Objet[4];  
+    protected List<Objet> objets = new ArrayList<>();  
     protected int action = 0;
 
 
@@ -21,14 +24,12 @@ public abstract class  Node implements Event{
         nbNodes += 1;
         id = nbNodes;
     }
-
-    public Node(String description,PersonnageDeBase[] personnages,Arme[] armes,Artefacte[] artefactes,Objet[] objets){
-        this(description);
-        this.personnages = personnages;
-        this.armes = armes;
-        this.artefactes = artefactes;
-        this.objets = objets;
+        /* 
+    public void setItemKeys(Objet[] objets){
+        for (Objet o : objets)
+            itemKeys.add(o);
     }
+    
 
     public void setUnivers(PersonnageDeBase[] personnages,Arme[] armes,Artefacte[] artefactes,Objet[] objets){
         this.personnages = personnages;
@@ -36,6 +37,7 @@ public abstract class  Node implements Event{
         this.artefactes = artefactes;
         this.objets = objets;
     }
+    */
 
     public void addArme(Arme arme){
         for ( int i = 0; i<armes.length;i++){
@@ -60,13 +62,12 @@ public abstract class  Node implements Event{
     }
 
     public void addObjets(Objet objet){
-        for ( int i = 0; i<objets.length;i++){
-            if (objets[i]==null){
-                objets[i] = objet;
-                return;
-            }
-        }
-        System.out.println("Plus de places disponibles");
+        objets.add(objet);
+    }
+
+    public void setObjets(Objet[] objets){
+        for (Objet o : objets)
+            this.objets.add(o);
     }
 
     public void addArteface(Artefacte artefacte){
@@ -137,7 +138,7 @@ public abstract class  Node implements Event{
         catch(Exception e){e.printStackTrace();}
 
         if (action==2){
-            heros.ajouteObjet(objets[0]);
+            heros.ajouteObjet(objets.get(0));
         }
         if (action == 3){
             heros.setArme(armes[0]);

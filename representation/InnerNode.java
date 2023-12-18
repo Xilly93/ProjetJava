@@ -90,7 +90,7 @@ public class InnerNode extends Node {
         }
 
         else if( this.condition == 2){
-            if (heros.hasObjet(this.objets[0])){
+            if (heros.hasObjet(this.objets.get(0))){
                 return 1;
             }
             else{

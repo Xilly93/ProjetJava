@@ -28,11 +28,6 @@ public class Main {
     public static void main (String args[]){
 
     //Test Terminal Node
-    TerminalNode t1 = new TerminalNode("TERMINAL NODE 1");
-    TerminalNode t2 = new TerminalNode("TERMINAL NODE 2");
-    TerminalNode t3 = new TerminalNode("TERMINAL NODE 3");
-    TerminalNode t4 = new TerminalNode("TERMINAL NODE 4");
-    TerminalNode GameOverTn = new TerminalNode("GAME OVER");
 
     // ------------------ PERSONNAGES -----------------------------
     Dieu[] Dieux = {new Dieu("Poseidon",6,Element.EAU),new Dieu("Zeus",6,Element.FOUDRE),new Dieu("Héphaistos",6,Element.FEU),new Dieu("Ares",6,Element.FEU),new Dieu("Hermes",6,Element.VENT)};
@@ -44,8 +39,8 @@ public class Main {
     Demon[] Demons = {new Demon("Cerbere", new Element[]{Element.ANIMAL,Element.FEU}),new Demon("Gorgogne", new Element[]{})};
     
     // ------------------ ARMES -----------------------------
-    Epee[] Epees = {new Epee("Epee en bois",9,4,7), new Epee("Epee d'Achille",15,7,10) , new Epee("Excalibur", 100, 50, 20,Element.FEU)};
-    Lance[] Lances = {new Lance("Lance en bois",7,9,4)};
+    Epee[] Epees = {new Epee("Epee en bois",9,4,7), new Epee("Epee d'Achille",15,7,10),new Epee("Epee d'Hector",18,10,14) , new Epee("Excalibur", 100, 50, 20,Element.FEU)};
+    Lance[] Lances = {new Lance("Lance en bois",7,9,4),new Lance("Lance d'Athena",9,13,7)};
     Arc[] Arcs = {new Arc("Arc en bois",4,7,9)}; 
 
 
@@ -54,7 +49,7 @@ public class Main {
 Scanner sc = new Scanner(System.in);
 // Choix du nom du personnage
     Heros heros = new Heros(null);
-    Introduction(heros,sc);
+    //Introduction(heros,sc);
 
     // Partie 1 : Arrivée d'Hermes
 
@@ -69,13 +64,22 @@ Scanner sc = new Scanner(System.in);
     DecisionNode D9 = (DecisionNode) nodeMap.get("D9");
     DecisionNode D10 = (DecisionNode) nodeMap.get("D10");
     DecisionNode D11 = (DecisionNode) nodeMap.get("D11");
+    DecisionNode D15 = (DecisionNode) nodeMap.get("D15");
+    DecisionNode D17 = (DecisionNode) nodeMap.get("D17");
     ChanceNode C1 = (ChanceNode) nodeMap.get("C1");
     ChanceNode C2 = (ChanceNode) nodeMap.get("C2");
+    ChanceNode C3 = (ChanceNode) nodeMap.get("C3");
     InnerNode I20 = (InnerNode) nodeMap.get("I20");
     InnerNode I31 = (InnerNode) nodeMap.get("I31");
     InnerNode I36 = (InnerNode) nodeMap.get("I36");
     InnerNode I37 = (InnerNode) nodeMap.get("I37");
     InnerNode I52 = (InnerNode) nodeMap.get("I52");
+    InnerNode I59 = (InnerNode) nodeMap.get("I59");
+    InnerNode I70 = (InnerNode) nodeMap.get("I70");
+    InnerNode I71 = (InnerNode) nodeMap.get("I71");
+    InnerNode I74 = (InnerNode) nodeMap.get("I74");
+    InnerNode I75 = (InnerNode) nodeMap.get("I75");
+    
     
     //D2.addPerso(heros);
     D2.addArme(Epees[0]);
@@ -95,10 +99,19 @@ Scanner sc = new Scanner(System.in);
     D11.setCondition(1);
     D11.setAllStatsMin(new int[][]{{9,0,0},{7,0,7},{0,9,0},{0,7,7}});
     D11.setNextChoice(new int[][]{{2,1},{2,1},{2,1},{2,1}});
+    D15.setNbOfDecision(3);
+    D15.setCondition(2);
+    D15.setObjets(new Objet[]{null,Objet.CIRE,null});
+    D15.setNextChoice(new int[][]{{1,1},{2,4},{3,3}});
+    D17.setNbOfDecision(3);
+    D17.setCondition(2);
+    D17.setObjets(new Objet[]{Objet.FLUTE_DE_PAN,null,null});
+    D17.setNextChoice(new int[][]{{1,4},{2,2},{3,3}});
 
 
     C1.setProba(ChanceNode.HighChance);
-    C2.setProba(ChanceNode.AlmostSure);
+    C2.setProba(ChanceNode.LowChance);
+    C3.setProba(ChanceNode.FiftyFifty);
     
     I20.setAction(2);
     I20.addObjets(Objet.CIRE);
@@ -111,10 +124,23 @@ Scanner sc = new Scanner(System.in);
     I37.addObjets(Objet.VIN);
     I52.setAction(3);
     I52.addArme(Epees[1]);
+    I59.setAction(2);
+    I59.addObjets(Objet.AILES_ICARE);
+    I70.setAction(2);
+    I70.addObjets(Objet.CLEF_DES_ENFERS);
+    I71.setAction(3);
+    I71.addArme(Lances[1]);
+    I74.setAction(3);
+    I74.addArme(Epees[2]);
+    I75.setAction(2);
+    I75.addObjets(Objet.BOUCLIER_MIROIR);
+
 
     //Execution
     heros.setArme(Epees[0]);
-    NodeF.Execute(nodeMap.get("I1"),sc);
+    heros.ajouteObjet(Objet.CIRE);
+    heros.ajouteObjet(Objet.FLUTE_DE_PAN);
+    NodeF.Execute(nodeMap.get("D15"),sc);
 
     }
     

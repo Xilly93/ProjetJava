@@ -14,6 +14,7 @@ public class DecisionNode extends InnerNode {
     private int nbOfDecision;
     private List<List<Integer>> allStatsMin = new ArrayList<>();
     private List<List<Integer>> nextChoice = new ArrayList<>();
+    //private List<Objet> itemKeys = new ArrayList<>();
 
     public DecisionNode(String description,Node n1,Node n2,Node n3,Node n4){
         super(description,n1,n2,n3,n4);
@@ -35,6 +36,12 @@ public class DecisionNode extends InnerNode {
         }
 
     }
+    /* 
+    public void setItemKeys(Objet[] objets){
+        for (Objet o : objets)
+            itemKeys.add(o);
+    }
+    */
 
     public void Decision(){
         Scanner sc = new Scanner(System.in);
@@ -80,6 +87,15 @@ public class DecisionNode extends InnerNode {
                 return nextChoice.get(decision-1).get(1);
             }
         }
+        else if(condition == 2){
+            Objet o = objets.get(decision-1);
+            if(heros.hasObjet(o)){
+                return nextChoice.get(decision-1).get(0); 
+            }
+            else{
+                return nextChoice.get(decision-1).get(1);
+            }
+        }
         return 0;
     }
 
@@ -96,6 +112,7 @@ public class DecisionNode extends InnerNode {
         }
     }
 
+    @Override
     public void callAction(){
         Heros heros = (Heros) this.personnages[0];
         // Choix de prendre une arme parmi les decisions

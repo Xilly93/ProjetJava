@@ -104,8 +104,6 @@ I52 : Vous acceptez et continuez votre chemin.
 
 I53: Vous continuez votre progression... Alors que l'obscurité règne plus que jamais, une lueur céleste apparaît. Cette lumière provient de l'extérieur. Vous suivez cette lumière.\n Vous arrivez à une grande pièce avec un plafond très haut mais surtout un accès vers l'extérieur depuis le plafond. Il fait jour. Le ciel est dégagé, et le soleil tapant. Vous entendez du bruit ...
 
-I53 : Au coin de la pièce, deux hommes parlent : un vieil homme et un jeune aux cheveux dorés. A sa gauche , vous voyez une table, avec différents outils . Vous remarquez que le jeune homme possède des ailes blanches en cire et en métal accroché à son dos, et que le vieil homme essaye d'ajuster ces ailes pour qu'elles fonctionnent bien. Vous écoutez la conversation ...
-
 I54 : " Ne t'en fais pas Icare, une fois ces ailes terminées, nous pourrons sortir de là. Et là-bas, tu pourras y voir pour la première fois la mer, le soleil, les champs étendus du royaume de Grèce, ainsi que ses prairies et ses forêts verdoyantes. Je t'aime filston, mais tu dois t'échapper. tu n'as rien à faire dans ce labyrinthe avec moi ! Mais j'ai besoin de cire ..."
 
 I55 : L'homme s'approche de vous lentement et saisit votre arme, ne vous permettant plus de la récupérer , et dit : " Pardonnez-moi, je ne peux pas prendre de risques. C'est pour protéger mon fils." Vous réagissez en bondissant en arrière, mais celui-ci vous poignarde quatre fois dans le ventre. Vous finissez par saigner et mourir ...
@@ -129,6 +127,26 @@ I63 : Au bout de quelques minutes, Dédale fini de régler les ailes d'Icare. Il
 I64 : Icare se prépare et s'élance avec enthousiasme jusqu'à pouvoir utiliser ses ailes. Il continue de voler en faisant le tour de la pièce et prend de la hauteur.\nDédale est réjoui, voyant  que son invention fonctionne mais celui s'inquiète car Icare prend trop de hauteur. Il crie : " Icare, ne vole pas trop près du soleil ou tes ailes fondront. "
 
 I65 : Icare s'amuse et ne suit plus les instructions de son père, hypnotisé par le plaisir de voler. Il commence à prendre encore de la hauteur mais celui - ci perd le contrôle. Les ailes commencent à fondre à cause du soleil et ce dernier tombe du ciel, de plus de cent mètres et atterrit violemment au sol, le laissant pour mort.
+
+I66 : “ Com… Comment ??! Icare ?! Icare ? “ dit-il épouvanté. Mais le visage défiguré d’Icare par la chute et la flac de sang montrent Icare mort. Dédale s'approche du cadavre d’Icare : “ Ça… ça ne peut pas être vrai… Que s'est il passé ! Réponds moi Icare ! Réponds moi !“ Aucune réponse et un silence pesant régne dans la pièce… 
+
+I67 : Vous essayez de rassurer Dédale en vous approchant de lui. Mais celui-ci sort sa dague de sa poche et vous poignardé violemment dans le ventre. Vous finissez par mourir… 
+
+I68 : “ Fuis donc, tu n'as pas d’honneur ! Tu n'as pas honte d'avoir tué un enfant. “ Vous fuyez de la pièce et allez au couloir suivant
+
+I69 : Vous infligez un coup mortel à Dédale. Déstabilisé par la situation, il ne le voit pas venir. Vous finissez par le planter au coeur. \nVous voyez les tristes cadavres de Dédale et Icare allongés au sol. Vous continuez votre chemin.
+
+I70 : Vous avez reçu la Clef des Enfers
+
+I71 : Vous avez reçu la Lance d’Athéna
+
+I72 : Au coin de la pièce, deux hommes parlent : un vieil homme et un jeune aux cheveux dorés. A sa gauche , vous voyez une table, avec différents outils . Vous remarquez que le jeune homme possède des ailes blanches en cire et en métal accroché à son dos, et que le vieil homme essaye d'ajuster ces ailes pour qu'elles fonctionnent bien. Vous écoutez la conversation ...
+
+I73: Vous commencez à jouer de la flûte de Pan devant Dédale et celui-ci s'endort. Bien joué !
+
+I74 : Vous avez reçu l’épée d'Hector.
+
+I75 : Vous avez reçu le bouclier Miroir. 
 
 D1 : Si tu as bien compris dis moi OUI, sinon NON :\n1.Oui\n2.Non\n(Choisissez entre 1 ou 2);
 
@@ -162,6 +180,9 @@ D15 : Le vieil homme vous aperçoit, prend sa dague et vous menace avec son arme
 
 D16 :J'ai conçu pour mon fils ,Icare, des ailes. Je veux ce qu'il y a de mieux pour mon fils. Aidez-moi à le faire sortir et je vous aiderai en retour. Avec la cire, mon fils pourra sortir de ce lieu et voler au- dessus de ses murs. Donnez la moi, et je pourrais aussi fabriquer des ailes pour vous.\n1.Lui donner la cire\n2.Poignarder Dédale et arracher les ailes d'Icare
 
+D17 : Dédale vous regarde avec colère et dit : “ Vous ! Vous, êtes responsables de la mort de mon fils ! C'est votre faute, c'est à cause de vous que mon fils est mort ! Vous êtes l'origine de ce mal ! “.\nQue faites vous :\n1.Essayer de le calmer\n2.fuir\n3.Tuer Dédale
+
+D18 : Vous arrivez à un embranchement avec plusieurs couloirs. Où allez vous ?: \n1.GAUCHE \n2.TOUT DROIT
 
 C1 : Elle s'enfuit de douleur vous laissant le passage pour la suite. Bien joué
 

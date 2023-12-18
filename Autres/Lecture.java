@@ -159,7 +159,12 @@ public class Lecture {
             System.out.println("nbvalues : " + values.size());
             System.out.println("Problème de taille");
         }
-
+        /* 
+        System.out.println("nbkeys:" + keys.size() );
+        System.out.println("nbvalues : " + values.size());
+        System.out.println(" keys :" + keys);
+        */
+        
         Map<K, V> map = new HashMap<>();
         for (int i = 0; i < keys.size(); i++) {
             map.put(keys.get(i), values.get(i));
