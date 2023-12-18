@@ -1,6 +1,8 @@
 package univers;
 
-public abstract class PersonnageDeBase {
+import java.io.Serializable;
+
+public abstract class PersonnageDeBase implements Serializable {
     protected int vie; // Nombres de vies du personnage
     protected String Nom;
     public PersonnageDeBase(String Nom){

@@ -2,6 +2,7 @@ package representation;
 
 import java.util.Scanner;
 import java.util.List;
+import Autres.MenuInter;
 
 public class NodeF {
     /*
@@ -92,10 +93,14 @@ public class NodeF {
                 return;
             }
             if(!(node.getDescription().equals("null")))
+                System.out.println(node.personnages[0]);
                 node.display();
             mettreAjour(node);
             if (!(node instanceof DecisionNode || node.getDescription().equals("null"))){
-            sc.nextLine();
+                String s = sc.nextLine();
+                if(s.equals("s")){
+                    MenuInter.sauvegarder(node);
+                }
             }
 
 

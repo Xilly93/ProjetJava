@@ -1,4 +1,6 @@
 package univers.Armes;
+import java.io.Serializable;
+
 import univers.Element;
 
 /* 
@@ -8,7 +10,7 @@ pouvoir faire perdre une vie à l'adversaire.
 - Si le choix est choisi et le nbr d'attaque , portee, precision est inférieur, 
 alors le héros perd une vie.
  */
-public abstract class Arme {
+public abstract class Arme implements Serializable{
     protected String Nom;
     protected Element Elem; // FEU VENT EAU FOUDRE
     protected int attaque ; // 0 à 50
@@ -22,7 +24,7 @@ public abstract class Arme {
         this.precision = precision;
     }
 
-    public Arme(String Nom, int attaque, int portee, int precision,Element Elem){
+    public Arme(String Nom, int attaque, int portee, int precision,Element Elem) {
         this(Nom,attaque,portee,precision);
         this.Elem = Elem;
     }

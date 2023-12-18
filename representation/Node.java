@@ -1,6 +1,7 @@
 package representation;
 import univers.Armes.Arme;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import univers.PersonnageDeBase;
@@ -8,7 +9,7 @@ import univers.Artefactes.Artefacte;
 import univers.Objets.Objet;
 import univers.Personnages.Mortels.Heros;
 
-public abstract class  Node implements Event{
+public abstract class  Node implements Event, Serializable{
     protected String description;
     protected static int nbNodes = 0;
     protected final int id;
