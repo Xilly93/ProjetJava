@@ -140,8 +140,8 @@ Scanner sc = new Scanner(System.in);
     heros.setArme(Epees[0]);
     heros.ajouteObjet(Objet.CIRE);
     heros.ajouteObjet(Objet.FLUTE_DE_PAN);
-    MenuInter.Display(nodeMap);
-    //NodeF.Execute(nodeMap.get("I54"),sc);
+    //MenuInter.Display(nodeMap);
+    NodeF.Execute(nodeMap.get("D14"),sc);
 
     }
     

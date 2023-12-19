@@ -93,7 +93,7 @@ public class NodeF {
                 return;
             }
             if(!(node.getDescription().equals("null")))
-                System.out.println(node.personnages[0]);
+                //System.out.println(node.personnages[0]);
                 node.display();
             mettreAjour(node);
             if (!(node instanceof DecisionNode || node.getDescription().equals("null"))){
